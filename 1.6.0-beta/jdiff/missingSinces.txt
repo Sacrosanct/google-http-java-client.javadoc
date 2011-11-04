@@ -1,0 +1,22 @@
+OK: com.google.api.client.http.HttpStatusCodes Class
+OK: com.google.api.client.testing.http.HttpTesting Class
+OK: com.google.api.client.http.json.JsonHttpClient Class
+OK: com.google.api.client.http.json.JsonHttpClient.Builder Class
+OK: com.google.api.client.http.json.JsonHttpRequest Class
+OK: com.google.api.client.http.json.JsonHttpRequestInitializer Interface
+OK: com.google.api.client.testing.http.MockHttpUnsuccessfulResponseHandler Class
+OK: com.google.api.client.http.UriTemplate Class
+OK: com.google.api.client.http.apache.ApacheHttpTransport Constructor (HttpClient)
+OK: com.google.api.client.http.HttpResponseException Constructor (com.google.api.client.http.HttpResponse, java.lang.String)
+OK: com.google.api.client.json.JsonGenerator Method enablePrettyPrint()
+OK: com.google.api.client.http.HttpHeaders Method getCookie()
+OK: com.google.api.client.json.GenericJson Method getFactory()
+OK: com.google.api.client.http.HttpRequest Method getFollowRedirects()
+OK: com.google.api.client.http.apache.ApacheHttpTransport Method newDefaultHttpClient()
+OK: com.google.api.client.http.HttpHeaders Method setCookie(java.lang.String)
+OK: com.google.api.client.json.GenericJson Method setFactory(com.google.api.client.json.JsonFactory)
+OK: com.google.api.client.http.HttpRequest Method setFollowRedirects(boolean)
+OK: com.google.api.client.testing.http.MockLowLevelHttpResponse Method setReasonPhrase(java.lang.String)
+NO DOC BLOCK: com.google.api.client.testing.json.AbstractJsonParserTest Method testToFromString_UTF8()
+OK: com.google.api.client.json.GenericJson Method toPrettyString()
+OK: com.google.api.client.json.JsonFactory Method toPrettyString(java.lang.Object)
