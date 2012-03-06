@@ -1,0 +1,66 @@
+OK: com.google.api.client.testing.json.AbstractJsonFactoryTest Class
+NO DOC BLOCK: com.google.api.client.testing.json.AbstractJsonFactoryTest.A Class
+NO DOC BLOCK: com.google.api.client.testing.json.AbstractJsonFactoryTest.AnyType Class
+NO DOC BLOCK: com.google.api.client.testing.json.AbstractJsonFactoryTest.ArrayType Class
+NO DOC BLOCK: com.google.api.client.testing.json.AbstractJsonFactoryTest.CollectionOfCollectionType Class
+NO DOC BLOCK: com.google.api.client.testing.json.AbstractJsonFactoryTest.DoubleListTypeVariableType Class
+NO DOC BLOCK: com.google.api.client.testing.json.AbstractJsonFactoryTest.E Class
+NO DOC BLOCK: com.google.api.client.testing.json.AbstractJsonFactoryTest.Entry Class
+NO DOC BLOCK: com.google.api.client.testing.json.AbstractJsonFactoryTest.EnumValue Class
+NO DOC BLOCK: com.google.api.client.testing.json.AbstractJsonFactoryTest.Feed Class
+NO DOC BLOCK: com.google.api.client.testing.json.AbstractJsonFactoryTest.FloatMapTypeVariableType Class
+NO DOC BLOCK: com.google.api.client.testing.json.AbstractJsonFactoryTest.IntArrayTypeVariableType Class
+NO DOC BLOCK: com.google.api.client.testing.json.AbstractJsonFactoryTest.IntegerTypeVariableType Class
+NO DOC BLOCK: com.google.api.client.testing.json.AbstractJsonFactoryTest.MapOfMapType Class
+NO DOC BLOCK: com.google.api.client.testing.json.AbstractJsonFactoryTest.NumberTypes Class
+NO DOC BLOCK: com.google.api.client.testing.json.AbstractJsonFactoryTest.NumberTypesAsString Class
+NO DOC BLOCK: com.google.api.client.testing.json.AbstractJsonFactoryTest.StringNullValue Class
+NO DOC BLOCK: com.google.api.client.testing.json.AbstractJsonFactoryTest.TypeVariablesPassedAround Class
+NO DOC BLOCK: com.google.api.client.testing.json.AbstractJsonFactoryTest.TypeVariableType Class
+NO DOC BLOCK: com.google.api.client.testing.json.AbstractJsonFactoryTest.WildCardTypes Class
+NO DOC BLOCK: com.google.api.client.testing.json.AbstractJsonFactoryTest.X Class
+NO DOC BLOCK: com.google.api.client.testing.json.AbstractJsonFactoryTest.Y Class
+NO DOC BLOCK: com.google.api.client.testing.json.AbstractJsonFactoryTest.Z Class
+OK: com.google.api.client.http.BackOffPolicy Interface
+OK: com.google.api.client.http.BasicAuthentication Class
+OK: com.google.api.client.http.ExponentialBackOffPolicy Class
+OK: com.google.api.client.http.ExponentialBackOffPolicy.Builder Class
+OK: com.google.api.client.http.ByteArrayContent Constructor (java.lang.String, byte[], int, int)
+OK: com.google.api.client.http.UrlEncodedParser Constructor (java.lang.String)
+OK: com.google.api.client.http.json.JsonHttpClient Method buildHttpRequest(com.google.api.client.http.HttpMethod, com.google.api.client.http.GenericUrl, java.lang.Object)
+MISSING @SINCE TAG: com.google.api.client.http.json.JsonHttpClient Method buildHttpRequest(com.google.api.client.http.HttpMethod, java.lang.String, com.google.api.client.http.json.JsonHttpRequest)
+MISSING @SINCE TAG: com.google.api.client.http.json.JsonHttpRequest Method buildHttpRequest()
+MISSING @SINCE TAG: com.google.api.client.http.json.JsonHttpRequest Method buildHttpRequestUrl()
+OK: com.google.api.client.http.HttpResponseException Method computeMessageBuffer(com.google.api.client.http.HttpResponse)
+OK: com.google.api.client.http.AbstractInputStreamContent Method copy(java.io.InputStream, java.io.OutputStream, boolean)
+OK: com.google.api.client.http.json.JsonHttpClient Method executeUnparsed(com.google.api.client.http.HttpMethod, com.google.api.client.http.GenericUrl, java.lang.Object)
+OK: com.google.api.client.http.UriTemplate Method expand(java.lang.String, java.lang.String, java.lang.Object, boolean)
+OK: com.google.api.client.json.JsonFactory Method fromInputStream(java.io.InputStream, java.lang.Class<T>)
+OK: com.google.api.client.json.JsonFactory Method fromReader(java.io.Reader, java.lang.Class<T>)
+OK: com.google.api.client.http.HttpRequest Method getBackOffPolicy()
+OK: com.google.api.client.http.AbstractInputStreamContent Method getCloseInputStream()
+OK: com.google.api.client.http.UrlEncodedContent Method getContent(com.google.api.client.http.HttpRequest)
+OK: com.google.api.client.http.HttpRequest Method getContentLoggingLimit()
+OK: com.google.api.client.http.HttpResponse Method getContentLoggingLimit()
+OK: com.google.api.client.http.HttpResponseException Method getHeaders()
+MISSING @SINCE TAG: com.google.api.client.http.json.JsonHttpRequest Method getJsonContent()
+MISSING @SINCE TAG: com.google.api.client.http.json.JsonHttpRequest Method getMethod()
+OK: com.google.api.client.http.HttpResponseException Method getStatusCode()
+OK: com.google.api.client.http.HttpRequest Method getThrowExceptionOnExecuteError()
+MISSING @SINCE TAG: com.google.api.client.http.json.JsonHttpRequest Method getUriTemplate()
+OK: com.google.api.client.http.HttpRequest Method isAllowEmptyContent()
+OK: com.google.api.client.http.HttpResponseException Method isSuccessStatusCode()
+OK: com.google.api.client.http.HttpRequest Method setAllowEmptyContent(boolean)
+OK: com.google.api.client.http.HttpRequest Method setBackOffPolicy(com.google.api.client.http.BackOffPolicy)
+OK: com.google.api.client.http.json.JsonHttpClient.Builder Method setBaseUrl(com.google.api.client.http.GenericUrl)
+OK: com.google.api.client.http.AbstractInputStreamContent Method setCloseInputStream(boolean)
+NO DOC BLOCK: com.google.api.client.http.ByteArrayContent Method setCloseInputStream(boolean)
+NO DOC BLOCK: com.google.api.client.http.FileContent Method setCloseInputStream(boolean)
+NO DOC BLOCK: com.google.api.client.http.InputStreamContent Method setCloseInputStream(boolean)
+OK: com.google.api.client.http.HttpRequest Method setContentLoggingLimit(int)
+OK: com.google.api.client.http.HttpResponse Method setContentLoggingLimit(int)
+OK: com.google.api.client.http.InputStreamContent Method setRetrySupported(boolean)
+OK: com.google.api.client.http.HttpRequest Method setThrowExceptionOnExecuteError(boolean)
+OK: com.google.api.client.json.JsonFactory Method toByteArray(java.lang.Object)
+MISSING @SINCE TAG: com.google.api.client.http.HttpStatusCodes Field STATUS_CODE_SERVER_ERROR
+MISSING @SINCE TAG: com.google.api.client.http.HttpStatusCodes Field STATUS_CODE_SERVICE_UNAVAILABLE
