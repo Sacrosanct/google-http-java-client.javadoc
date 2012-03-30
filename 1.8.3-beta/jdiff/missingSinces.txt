@@ -1,0 +1,15 @@
+OK: com.google.api.client.util.StringUtils Class
+OK: com.google.api.client.util.Base64 Method decodeBase64(byte[])
+OK: com.google.api.client.util.Base64 Method decodeBase64(java.lang.String)
+OK: com.google.api.client.util.Base64 Method encodeBase64(byte[])
+OK: com.google.api.client.util.Base64 Method encodeBase64String(byte[])
+OK: com.google.api.client.util.Base64 Method encodeBase64URLSafe(byte[])
+OK: com.google.api.client.util.Base64 Method encodeBase64URLSafeString(byte[])
+OK: com.google.api.client.http.json.JsonHttpClient Method executeAsInputStream(com.google.api.client.http.HttpMethod, com.google.api.client.http.GenericUrl, java.lang.Object)
+OK: com.google.api.client.http.json.JsonHttpRequest Method executeAsInputStream()
+OK: com.google.api.client.testing.http.MockLowLevelHttpRequest Method getResponse()
+MISSING @SINCE TAG: com.google.api.client.testing.http.MockLowLevelHttpRequest Method setResponse(com.google.api.client.testing.http.MockLowLevelHttpResponse)
+NO DOC BLOCK: com.google.api.client.testing.json.AbstractJsonFactoryTest Method testParser_nullInputStream()
+NO DOC BLOCK: com.google.api.client.testing.json.AbstractJsonFactoryTest Method testParser_nullReader()
+NO DOC BLOCK: com.google.api.client.testing.json.AbstractJsonFactoryTest Method testParser_nullString()
+OK: com.google.api.client.http.HttpRequest Field VERSION
