@@ -1,0 +1,29 @@
+OK: com.google.api.client.util.Clock Interface
+OK: com.google.api.client.testing.http.FixedClock Class
+OK: com.google.api.client.util.LoggingByteArrayOutputStream Class
+OK: com.google.api.client.util.LoggingInputStream Class
+OK: com.google.api.client.util.LoggingOutputStream Class
+OK: com.google.api.client.http.GenericUrl Method buildAuthority()
+OK: com.google.api.client.http.GenericUrl Method buildRelativeUrl()
+OK: com.google.api.client.http.HttpResponse Method download(java.io.OutputStream)
+OK: com.google.api.client.http.json.JsonHttpRequest Method download(java.io.OutputStream)
+OK: com.google.api.client.http.json.JsonHttpClient Method executeUnparsed(com.google.api.client.http.HttpRequest)
+OK: com.google.api.client.http.json.JsonHttpRequest Method getLastResponseHeaders()
+OK: com.google.api.client.http.json.JsonHttpRequest Method getRequestHeaders()
+OK: com.google.api.client.http.HttpRequest Method getRetryOnExecuteIOException()
+OK: com.google.api.client.http.HttpResponseException Method getStatusMessage()
+OK: com.google.api.client.json.JsonParser Method getUnsignedIntegerValue()
+OK: com.google.api.client.json.JsonParser Method getUnsignedLongValue()
+OK: com.google.api.client.http.HttpRequest Method isLoggingEnabled()
+OK: com.google.api.client.http.HttpResponse Method isLoggingEnabled()
+OK: com.google.api.client.http.HttpHeaders Method serializeHeaders(com.google.api.client.http.HttpHeaders, java.lang.StringBuilder, java.util.logging.Logger, com.google.api.client.http.LowLevelHttpRequest)
+OK: com.google.api.client.http.HttpHeaders Method serializeHeadersForMultipartRequests(com.google.api.client.http.HttpHeaders, java.lang.StringBuilder, java.util.logging.Logger, java.io.Writer)
+OK: com.google.api.client.http.HttpRequest Method setLoggingEnabled(boolean)
+OK: com.google.api.client.http.HttpResponse Method setLoggingEnabled(boolean)
+OK: com.google.api.client.http.json.JsonHttpRequest Method setRequestHeaders(com.google.api.client.http.HttpHeaders)
+OK: com.google.api.client.http.HttpRequest Method setRetryOnExecuteIOException(boolean)
+OK: com.google.api.client.json.JsonGenerator Method writeNumber(UnsignedInteger)
+OK: com.google.api.client.json.JsonGenerator Method writeNumber(UnsignedLong)
+MISSING @SINCE TAG: com.google.api.client.util.Data Field NULL_UNSIGNED_INTEGER
+MISSING @SINCE TAG: com.google.api.client.util.Data Field NULL_UNSIGNED_LONG
+MISSING @SINCE TAG: com.google.api.client.http.HttpStatusCodes Field STATUS_CODE_NOT_MODIFIED
