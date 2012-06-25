@@ -1,0 +1,1099 @@
+<?xml version="1.0" encoding="iso-8859-1" standalone="no"?>
+<comments
+  xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance'
+  xsi:noNamespaceSchemaLocation='comments.xsd'
+  name="Google_HTTP_Client_Library_for_Java_1.9.0-beta_to_Google_HTTP_Client_Library_for_Java_1.10.3-beta"
+  jdversion="1.1.1">
+
+<!-- This file contains comments for a JDiff report. -->
+<!-- It is used only in generating the report, and does not need to ship with the final report. -->
+
+<!-- The id attribute in an identifier element identifies the change as noted in the report. -->
+<!-- An id has the form package[.class[.[ctor|method|field].signature]], where [] indicates optional text. -->
+<!-- A comment element can have multiple identifier elements, which will -->
+<!-- will cause the same text to appear at each place in the report, but -->
+<!-- will be converted to separate comments when the comments file is used. -->
+<!-- HTML tags in the text field will appear in the report. -->
+<!-- You also need to close p HTML elements, used for paragraphs - see the top-level documentation. -->
+<comment>
+  <identifier id="com.google.api.client.extensions.android3.json"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.google.api.client.extensions.android3.json.AndroidJsonFactory"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.google.api.client.extensions.android3.json.AndroidJsonFactory.createJsonGenerator_added(java.io.OutputStream, java.nio.charset.Charset)"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.google.api.client.extensions.android3.json.AndroidJsonFactory.createJsonParser_added(java.io.InputStream, java.nio.charset.Charset)"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.google.api.client.extensions.appengine.http"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.google.api.client.extensions.appengine.http.urlfetch"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.google.api.client.extensions.appengine.http.urlfetch.UrlFetchTransport"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.google.api.client.http"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.google.api.client.http.AbstractHttpContent"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.google.api.client.http.AbstractHttpContent.ctor_added(com.google.api.client.http.HttpMediaType)"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.google.api.client.http.AbstractHttpContent.ctor_added(java.lang.String)"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.google.api.client.http.AbstractHttpContent.ctor_changed()"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.google.api.client.http.AbstractHttpContent.getCharset_added()"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.google.api.client.http.AbstractHttpContent.getMediaType_added()"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.google.api.client.http.AbstractHttpContent.getType_added()"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.google.api.client.http.AbstractHttpContent.getType_changed()"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.google.api.client.http.AbstractHttpContent.getType_changed()"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.google.api.client.http.AbstractHttpContent.getType_changed()"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.google.api.client.http.AbstractHttpContent.getType_changed()"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.google.api.client.http.AbstractHttpContent.setMediaType_added(com.google.api.client.http.HttpMediaType)"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.google.api.client.http.AbstractInputStreamContent"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.google.api.client.http.AbstractInputStreamContent.copy_changed(java.io.InputStream, java.io.OutputStream)"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.google.api.client.http.AbstractInputStreamContent.copy_changed(java.io.InputStream, java.io.OutputStream, boolean)"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.google.api.client.http.HttpHeaders"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.google.api.client.http.HttpHeaders.fromHttpHeaders_added(com.google.api.client.http.HttpHeaders)"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.google.api.client.http.HttpHeaders.fromHttpResponse_added(com.google.api.client.http.LowLevelHttpResponse, java.lang.StringBuilder)"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.google.api.client.http.HttpHeaders.getContentLength_changed()"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.google.api.client.http.HttpHeaders.setContentLength_changed(java.lang.Long)"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.google.api.client.http.HttpMediaType"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.google.api.client.http.HttpParser"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.google.api.client.http.HttpRequest"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.google.api.client.http.HttpRequest.addParser_changed(com.google.api.client.http.HttpParser)"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.google.api.client.http.HttpRequest.execute_changed()"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.google.api.client.http.HttpRequest.getParser_added()"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.google.api.client.http.HttpRequest.getParser_changed(java.lang.String)"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.google.api.client.http.HttpRequest.normalizeMediaType_changed(java.lang.String)"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.google.api.client.http.HttpRequest.setParser_added(com.google.api.client.util.ObjectParser)"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.google.api.client.http.HttpResponse"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.google.api.client.http.HttpResponse.disconnect_changed()"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.google.api.client.http.HttpResponse.download_changed(java.io.OutputStream)"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.google.api.client.http.HttpResponse.getContentCharset_added()"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.google.api.client.http.HttpResponse.getContent_changed()"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.google.api.client.http.HttpResponse.getMediaType_added()"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.google.api.client.http.HttpResponse.getParser_changed()"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.google.api.client.http.HttpResponse.parseAsString_changed()"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.google.api.client.http.HttpResponse.parseAs_added(java.lang.reflect.Type)"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.google.api.client.http.HttpResponse.parseAs_changed(java.lang.Class&lt;T&gt;)"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.google.api.client.http.HttpResponseException"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.google.api.client.http.HttpResponseException.ctor_changed(com.google.api.client.http.HttpResponse)"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.google.api.client.http.HttpResponseException.ctor_changed(com.google.api.client.http.HttpResponse, java.lang.String)"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.google.api.client.http.HttpResponseException.getHeaders_changed()"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.google.api.client.http.HttpResponseException.getResponse_removed()"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.google.api.client.http.LowLevelHttpRequest"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.google.api.client.http.LowLevelHttpRequest.addHeader_changed(java.lang.String, java.lang.String)"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.google.api.client.http.MultipartRelatedContent"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.google.api.client.http.MultipartRelatedContent.setMediaType_added(com.google.api.client.http.HttpMediaType)"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.google.api.client.http.UrlEncodedContent"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.google.api.client.http.UrlEncodedContent.ctor_changed(java.lang.Object)"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.google.api.client.http.UrlEncodedContent.setMediaType_added(com.google.api.client.http.HttpMediaType)"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.google.api.client.http.UrlEncodedContent.setType_changed(java.lang.String)"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.google.api.client.http.UrlEncodedParser"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.google.api.client.http.UrlEncodedParser.Builder"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.google.api.client.http.UrlEncodedParser.ctor_changed(java.lang.String)"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.google.api.client.http.UrlEncodedParser.parseAndClose_added(java.io.InputStream, java.nio.charset.Charset, java.lang.Class&lt;T&gt;)"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.google.api.client.http.UrlEncodedParser.parseAndClose_added(java.io.InputStream, java.nio.charset.Charset, java.lang.reflect.Type)"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.google.api.client.http.UrlEncodedParser.parseAndClose_added(java.io.Reader, java.lang.Class&lt;T&gt;)"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.google.api.client.http.UrlEncodedParser.parseAndClose_added(java.io.Reader, java.lang.reflect.Type)"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.google.api.client.http.javanet"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.google.api.client.http.javanet.NetHttpTransport"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.google.api.client.http.json"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.google.api.client.http.json.JsonHttpClient"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.google.api.client.http.json.JsonHttpClient.Builder"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.google.api.client.http.json.JsonHttpClient.Builder.ctor_added(com.google.api.client.http.HttpTransport, com.google.api.client.json.JsonFactory, java.lang.String, java.lang.String, com.google.api.client.http.HttpRequestInitializer)"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.google.api.client.http.json.JsonHttpClient.Builder.ctor_changed(com.google.api.client.http.HttpTransport, com.google.api.client.json.JsonFactory, com.google.api.client.http.GenericUrl)"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.google.api.client.http.json.JsonHttpClient.Builder.getApplicationName_changed()"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.google.api.client.http.json.JsonHttpClient.Builder.getBaseUrl_changed()"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.google.api.client.http.json.JsonHttpClient.Builder.getObjectParser_added()"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.google.api.client.http.json.JsonHttpClient.Builder.getRootUrl_added()"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.google.api.client.http.json.JsonHttpClient.Builder.getServicePath_added()"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.google.api.client.http.json.JsonHttpClient.Builder.isBaseUrlUsed_added()"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.google.api.client.http.json.JsonHttpClient.Builder.setBaseUrl_changed(com.google.api.client.http.GenericUrl)"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.google.api.client.http.json.JsonHttpClient.Builder.setObjectParser_added(com.google.api.client.json.JsonObjectParser)"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.google.api.client.http.json.JsonHttpClient.Builder.setRootUrl_added(java.lang.String)"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.google.api.client.http.json.JsonHttpClient.Builder.setServicePath_added(java.lang.String)"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.google.api.client.http.json.JsonHttpClient.builder_removed(com.google.api.client.http.HttpTransport, com.google.api.client.json.JsonFactory, com.google.api.client.http.GenericUrl)"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.google.api.client.http.json.JsonHttpClient.createParser_changed()"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.google.api.client.http.json.JsonHttpClient.ctor_added(com.google.api.client.http.HttpTransport, com.google.api.client.http.json.JsonHttpRequestInitializer, com.google.api.client.http.HttpRequestInitializer, com.google.api.client.json.JsonFactory, com.google.api.client.json.JsonObjectParser, java.lang.String, java.lang.String)"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.google.api.client.http.json.JsonHttpClient.ctor_added(com.google.api.client.http.HttpTransport, com.google.api.client.http.json.JsonHttpRequestInitializer, com.google.api.client.http.HttpRequestInitializer, com.google.api.client.json.JsonFactory, com.google.api.client.json.JsonObjectParser, java.lang.String, java.lang.String, java.lang.String)"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.google.api.client.http.json.JsonHttpClient.ctor_added(com.google.api.client.http.HttpTransport, com.google.api.client.json.JsonFactory, java.lang.String, java.lang.String, com.google.api.client.http.HttpRequestInitializer)"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.google.api.client.http.json.JsonHttpClient.ctor_changed(com.google.api.client.http.HttpTransport, com.google.api.client.http.json.JsonHttpRequestInitializer, com.google.api.client.http.HttpRequestInitializer, com.google.api.client.json.JsonFactory, java.lang.String, java.lang.String)"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.google.api.client.http.json.JsonHttpClient.ctor_changed(com.google.api.client.http.HttpTransport, com.google.api.client.json.JsonFactory, java.lang.String)"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.google.api.client.http.json.JsonHttpClient.executeAsInputStream_changed(com.google.api.client.http.HttpMethod, com.google.api.client.http.GenericUrl, java.lang.Object)"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.google.api.client.http.json.JsonHttpClient.executeUnparsed_changed(com.google.api.client.http.HttpMethod, com.google.api.client.http.GenericUrl, java.lang.Object)"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.google.api.client.http.json.JsonHttpClient.executeUnparsed_changed(com.google.api.client.http.HttpRequest)"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.google.api.client.http.json.JsonHttpClient.getApplicationName_changed()"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.google.api.client.http.json.JsonHttpClient.getJsonHttpParser_changed()"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.google.api.client.http.json.JsonHttpClient.getJsonObjectParser_added()"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.google.api.client.http.json.JsonHttpClient.getRootUrl_added()"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.google.api.client.http.json.JsonHttpClient.getServicePath_added()"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.google.api.client.http.json.JsonHttpClient.isBaseUrlUsed_added()"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.google.api.client.http.json.JsonHttpContent"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.google.api.client.http.json.JsonHttpContent.setMediaType_added(com.google.api.client.http.HttpMediaType)"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.google.api.client.http.json.JsonHttpContent.setType_changed(java.lang.String)"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.google.api.client.http.json.JsonHttpParser"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.google.api.client.http.json.JsonHttpRequest"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.google.api.client.http.json.JsonHttpRequest.download_changed(java.io.OutputStream)"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.google.api.client.http.json.JsonHttpRequest.executeAsInputStream_changed()"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.google.api.client.http.json.JsonHttpRequest.executeUnparsed_changed()"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.google.api.client.http.json.JsonHttpRequest.getEnableGZipContent_added()"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.google.api.client.http.json.JsonHttpRequest.setEnableGZipContent_added(boolean)"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.google.api.client.http.protobuf"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.google.api.client.http.protobuf.ProtoHttpContent"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.google.api.client.http.protobuf.ProtoHttpContent.setMediaType_added(com.google.api.client.http.HttpMediaType)"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.google.api.client.http.protobuf.ProtoHttpParser"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.google.api.client.http.xml"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.google.api.client.http.xml.AbstractXmlHttpContent"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.google.api.client.http.xml.AbstractXmlHttpContent.setMediaType_added(com.google.api.client.http.HttpMediaType)"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.google.api.client.http.xml.AbstractXmlHttpContent.setType_changed(java.lang.String)"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.google.api.client.http.xml.XmlHttpContent"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.google.api.client.http.xml.XmlHttpContent.setMediaType_added(com.google.api.client.http.HttpMediaType)"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.google.api.client.http.xml.XmlHttpContent.setType_changed(java.lang.String)"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.google.api.client.http.xml.XmlHttpParser"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.google.api.client.http.xml.atom"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.google.api.client.http.xml.atom.AtomContent"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.google.api.client.http.xml.atom.AtomContent.setMediaType_added(com.google.api.client.http.HttpMediaType)"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.google.api.client.http.xml.atom.AtomContent.setType_changed(java.lang.String)"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.google.api.client.http.xml.atom.AtomParser"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.google.api.client.json"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.google.api.client.json.Json"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.google.api.client.json.Json.CONTENT_TYPE"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.google.api.client.json.Json.MEDIA_TYPE"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.google.api.client.json.JsonEncoding"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.google.api.client.json.JsonFactory"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.google.api.client.json.JsonFactory.createJsonGenerator_added(java.io.OutputStream, com.google.api.client.json.JsonEncoding)"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.google.api.client.json.JsonFactory.createJsonGenerator_added(java.io.OutputStream, java.nio.charset.Charset)"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.google.api.client.json.JsonFactory.createJsonGenerator_removed(java.io.OutputStream, com.google.api.client.json.JsonEncoding)"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.google.api.client.json.JsonFactory.createJsonObjectParser_added()"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.google.api.client.json.JsonFactory.createJsonParser_added(java.io.InputStream, java.nio.charset.Charset)"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.google.api.client.json.JsonFactory.createJsonParser_added(java.io.Reader)"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.google.api.client.json.JsonFactory.createJsonParser_added(java.lang.String)"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.google.api.client.json.JsonFactory.createJsonParser_changed(java.io.InputStream)"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.google.api.client.json.JsonFactory.createJsonParser_removed(java.io.Reader)"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.google.api.client.json.JsonFactory.createJsonParser_removed(java.lang.String)"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.google.api.client.json.JsonFactory.fromInputStream_added(java.io.InputStream, java.nio.charset.Charset, java.lang.Class&lt;T&gt;)"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.google.api.client.json.JsonFactory.fromInputStream_changed(java.io.InputStream, java.lang.Class&lt;T&gt;)"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.google.api.client.json.JsonObjectParser"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.google.api.client.json.JsonParser"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.google.api.client.json.JsonParser.parse_added(java.lang.reflect.Type, boolean, com.google.api.client.json.CustomizeJsonParser)"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.google.api.client.json.JsonParser.skipToKey_added(java.util.Set&lt;java.lang.String&gt;)"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.google.api.client.json.gson"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.google.api.client.json.gson.GsonFactory"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.google.api.client.json.gson.GsonFactory.createJsonGenerator_added(java.io.OutputStream, java.nio.charset.Charset)"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.google.api.client.json.gson.GsonFactory.createJsonParser_added(java.io.InputStream, java.nio.charset.Charset)"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.google.api.client.json.jackson"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.google.api.client.json.jackson.JacksonFactory"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.google.api.client.json.jackson.JacksonFactory.createJsonGenerator_added(java.io.OutputStream, java.nio.charset.Charset)"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.google.api.client.json.jackson.JacksonFactory.createJsonParser_added(java.io.InputStream, java.nio.charset.Charset)"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.google.api.client.protobuf"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.google.api.client.protobuf.ProtoObjectParser"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.google.api.client.testing.http"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.google.api.client.testing.http.MockLowLevelHttpResponse"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.google.api.client.testing.http.MockLowLevelHttpResponse.setContentLength_changed(long)"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.google.api.client.util"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.google.api.client.util.ClassInfo"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.google.api.client.util.ClassInfo.getIgnoreCase_added()"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.google.api.client.util.ClassInfo.of_added(java.lang.Class&lt;?&gt;, boolean)"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.google.api.client.util.GenericData"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.google.api.client.util.GenericData.Flags"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.google.api.client.util.GenericData.ctor_added(java.util.EnumSet&lt;com.google.api.client.util.GenericData.Flags&gt;)"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.google.api.client.util.GenericData.ctor_changed()"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.google.api.client.util.GenericData.getClassInfo_added()"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.google.api.client.util.ObjectParser"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.google.api.client.xml"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.google.api.client.xml.Xml"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.google.api.client.xml.Xml.MEDIA_TYPE"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.google.api.client.xml.XmlObjectParser"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.google.api.client.xml.atom"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.google.api.client.xml.atom.Atom"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.google.api.client.xml.atom.Atom.CONTENT_TYPE"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.google.api.client.xml.atom.Atom.MEDIA_TYPE"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+
+</comments>
