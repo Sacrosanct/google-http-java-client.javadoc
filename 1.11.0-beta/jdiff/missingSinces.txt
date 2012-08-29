@@ -1,0 +1,9 @@
+OK: com.google.api.client.http.EmptyContent Class
+OK: com.google.api.client.util.DateTime Constructor (java.lang.String)
+OK: com.google.api.client.http.HttpRequest Method getSuppressUserAgentSuffix()
+OK: com.google.api.client.http.HttpRequest Method handleRedirect(int, com.google.api.client.http.HttpHeaders)
+OK: com.google.api.client.http.HttpRequest Method isCurlLoggingEnabled()
+OK: com.google.api.client.http.HttpStatusCodes Method isRedirect(int)
+OK: com.google.api.client.http.HttpRequest Method setCurlLoggingEnabled(boolean)
+OK: com.google.api.client.http.HttpRequest Method setSuppressUserAgentSuffix(boolean)
+OK: com.google.api.client.http.HttpStatusCodes Field STATUS_CODE_NO_CONTENT
