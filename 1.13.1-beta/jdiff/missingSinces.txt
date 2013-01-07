@@ -1,0 +1,17 @@
+OK: com.google.api.client.http.apache.ApacheHttpTransport.Builder Class
+OK: com.google.api.client.http.HttpResponseInterceptor Interface
+OK: com.google.api.client.http.javanet.NetHttpTransport.Builder Class
+OK: com.google.api.client.util.SslUtils Class
+OK: com.google.api.client.extensions.appengine.http.UrlFetchTransport.Builder Class
+MISSING @SINCE TAG: com.google.api.client.util.DateTime Constructor (long, int)
+OK: com.google.api.client.http.HttpRequest Method executeAsync()
+OK: com.google.api.client.http.HttpRequest Method executeAsync(java.util.concurrent.Executor)
+OK: com.google.api.client.http.HttpHeaders Method getAuthorizationAsList()
+OK: com.google.api.client.http.HttpHeaders Method getFirstHeaderStringValue(java.lang.String)
+OK: com.google.api.client.testing.http.MockLowLevelHttpRequest Method getFirstHeaderValue(java.lang.String)
+OK: com.google.api.client.http.HttpHeaders Method getHeaderStringValues(java.lang.String)
+OK: com.google.api.client.testing.http.MockLowLevelHttpRequest Method getHeaderValues(java.lang.String)
+OK: com.google.api.client.http.HttpRequest Method getResponseInterceptor()
+OK: com.google.api.client.http.HttpHeaders Method setAuthorization(java.util.List<java.lang.String>)
+OK: com.google.api.client.http.HttpRequest Method setResponseInterceptor(com.google.api.client.http.HttpResponseInterceptor)
+OK: com.google.api.client.http.UrlEncodedParser Field MEDIA_TYPE
