@@ -1,0 +1,85 @@
+OK: com.google.api.client.util.ByteArrayStreamingContent Class
+OK: com.google.api.client.util.ByteStreams Class
+OK: com.google.api.client.util.Charsets Class
+OK: com.google.api.client.util.Collections2 Class
+OK: com.google.api.client.http.GZipEncoding Class
+OK: com.google.api.client.http.HttpEncoding Interface
+OK: com.google.api.client.http.HttpEncodingStreamingContent Class
+OK: com.google.api.client.http.HttpResponseException.Builder Class
+OK: com.google.api.client.util.IOUtils Class
+OK: com.google.api.client.util.Joiner Class
+OK: com.google.api.client.json.JsonObjectParser.Builder Class
+OK: com.google.api.client.util.Lists Class
+OK: com.google.api.client.util.LoggingStreamingContent Class
+OK: com.google.api.client.util.Maps Class
+OK: com.google.api.client.http.MultipartContent Class
+MISSING @SINCE TAG: com.google.api.client.http.MultipartContent.Part Class
+OK: com.google.api.client.util.NanoClock Interface
+OK: com.google.api.client.util.Objects Class
+MISSING @SINCE TAG: com.google.api.client.util.Objects.ToStringHelper Class
+OK: com.google.api.client.util.PemReader Class
+MISSING @SINCE TAG: com.google.api.client.util.PemReader.Section Class
+OK: com.google.api.client.util.Preconditions Class
+OK: com.google.api.client.util.SecurityUtils Class
+OK: com.google.api.client.util.Sets Class
+OK: com.google.api.client.util.StreamingContent Interface
+OK: com.google.api.client.util.Strings Class
+OK: com.google.api.client.util.Throwables Class
+OK: com.google.api.client.http.ExponentialBackOffPolicy Constructor (com.google.api.client.http.ExponentialBackOffPolicy.Builder)
+OK: com.google.api.client.http.GenericUrl Constructor (java.net.URI)
+OK: com.google.api.client.http.GenericUrl Constructor (java.net.URL)
+OK: com.google.api.client.http.HttpResponseException Constructor (com.google.api.client.http.HttpResponseException.Builder)
+OK: com.google.api.client.json.JsonObjectParser Constructor (com.google.api.client.json.JsonObjectParser.Builder)
+OK: com.google.api.client.testing.http.MockHttpTransport Constructor (com.google.api.client.testing.http.MockHttpTransport.Builder)
+OK: com.google.api.client.http.AbstractHttpContent Method computeLength(com.google.api.client.http.HttpContent)
+MISSING @SINCE TAG: com.google.api.client.http.AbstractHttpContent Method computeLength()
+OK: com.google.api.client.http.HttpHeaders Method getAge()
+OK: com.google.api.client.http.HttpResponseException Method getContent()
+OK: com.google.api.client.http.LowLevelHttpRequest Method getContentEncoding()
+OK: com.google.api.client.http.LowLevelHttpRequest Method getContentLength()
+OK: com.google.api.client.http.LowLevelHttpRequest Method getContentType()
+OK: com.google.api.client.util.SslUtils Method getDefaultKeyManagerFactory()
+OK: com.google.api.client.util.SslUtils Method getDefaultTrustManagerFactory()
+OK: com.google.api.client.http.HttpRequest Method getEncoding()
+OK: com.google.api.client.http.HttpHeaders Method getIfRange()
+OK: com.google.api.client.http.ExponentialBackOffPolicy.Builder Method getNanoClock()
+OK: com.google.api.client.util.SslUtils Method getPkixKeyManagerFactory()
+OK: com.google.api.client.util.SslUtils Method getPkixTrustManagerFactory()
+OK: com.google.api.client.util.SslUtils Method getSslContext()
+OK: com.google.api.client.http.LowLevelHttpRequest Method getStreamingContent()
+OK: com.google.api.client.util.SslUtils Method getTlsSslContext()
+OK: com.google.api.client.http.json.JsonHttpContent Method getWrapperKey()
+OK: com.google.api.client.json.JsonObjectParser Method getWrapperKeys()
+NO DOC BLOCK: com.google.api.client.util.DateTime Method hashCode()
+OK: com.google.api.client.util.SslUtils Method initSslContext(javax.net.ssl.SSLContext, java.security.KeyStore, javax.net.ssl.TrustManagerFactory)
+OK: com.google.api.client.testing.http.MockLowLevelHttpResponse Method isDisconnected()
+OK: com.google.api.client.http.UrlEncodedParser Method parse(java.io.Reader, java.lang.Object)
+MISSING @SINCE TAG: com.google.api.client.http.UrlEncodedParser Method parse(java.lang.String, java.lang.Object)
+OK: com.google.api.client.http.HttpHeaders Method setAge(java.lang.Long)
+OK: com.google.api.client.http.LowLevelHttpRequest Method setContentEncoding(java.lang.String)
+OK: com.google.api.client.http.LowLevelHttpRequest Method setContentLength(long)
+OK: com.google.api.client.http.LowLevelHttpRequest Method setContentType(java.lang.String)
+OK: com.google.api.client.http.HttpRequest Method setEncoding(com.google.api.client.http.HttpEncoding)
+OK: com.google.api.client.http.HttpHeaders Method setIfRange(java.lang.String)
+OK: com.google.api.client.http.ExponentialBackOffPolicy.Builder Method setNanoClock(com.google.api.client.util.NanoClock)
+OK: com.google.api.client.xml.atom.Atom Method setSlugHeader(com.google.api.client.http.HttpHeaders, java.lang.String)
+OK: com.google.api.client.http.LowLevelHttpRequest Method setStreamingContent(com.google.api.client.util.StreamingContent)
+OK: com.google.api.client.http.json.JsonHttpContent Method setWrapperKey(java.lang.String)
+OK: com.google.api.client.http.GenericUrl Method toURI()
+OK: com.google.api.client.http.GenericUrl Method toURL()
+OK: com.google.api.client.http.GenericUrl Method toURL(java.lang.String)
+OK: com.google.api.client.http.apache.ApacheHttpTransport.Builder Method trustCertificates(java.security.KeyStore)
+OK: com.google.api.client.http.javanet.NetHttpTransport.Builder Method trustCertificates(java.security.KeyStore)
+OK: com.google.api.client.http.apache.ApacheHttpTransport.Builder Method trustCertificatesFromJavaKeyStore(java.io.InputStream, java.lang.String)
+OK: com.google.api.client.http.javanet.NetHttpTransport.Builder Method trustCertificatesFromJavaKeyStore(java.io.InputStream, java.lang.String)
+OK: com.google.api.client.http.apache.ApacheHttpTransport.Builder Method trustCertificatesFromStream(java.io.InputStream)
+OK: com.google.api.client.http.javanet.NetHttpTransport.Builder Method trustCertificatesFromStream(java.io.InputStream)
+MISSING @SINCE TAG: com.google.api.client.json.JsonGenerator Method writeNumber(double)
+MISSING @SINCE TAG: com.google.api.client.json.JsonGenerator Method writeNumber(float)
+MISSING @SINCE TAG: com.google.api.client.json.JsonGenerator Method writeNumber(java.lang.String)
+MISSING @SINCE TAG: com.google.api.client.json.JsonGenerator Method writeNumber(java.math.BigDecimal)
+NO DOC BLOCK: com.google.api.client.testing.http.json.MockJsonGenerator Method writeNumber(double)
+NO DOC BLOCK: com.google.api.client.testing.http.json.MockJsonGenerator Method writeNumber(float)
+NO DOC BLOCK: com.google.api.client.testing.http.json.MockJsonGenerator Method writeNumber(java.lang.String)
+NO DOC BLOCK: com.google.api.client.testing.http.json.MockJsonGenerator Method writeNumber(java.math.BigDecimal)
+OK: com.google.api.client.http.HttpMethods Field PATCH

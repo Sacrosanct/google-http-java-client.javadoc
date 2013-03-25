@@ -32,8 +32,8 @@ com.google.api.client.http Documentation Differences
 </TR>
 <TR>
   <TD BGCOLOR="#FFFFFF" CLASS="NavBarCell2"><FONT SIZE="-2">
-  <A HREF="docdiffs_com.google.api.client.extensions.android.json.html"><B>PREV PACKAGE</B></A>  &nbsp;
-  &nbsp;<A HREF="docdiffs_com.google.api.client.http.protobuf.html"><B>NEXT PACKAGE</B></A>
+  <B>PREV PACKAGE</B>  &nbsp;
+  &nbsp;<A HREF="docdiffs_com.google.api.client.http.apache.html"><B>NEXT PACKAGE</B></A>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
   <A HREF="../changes.html" TARGET="_top"><B>FRAMES</B></A>  &nbsp;
   &nbsp;<A HREF="docdiffs_com.google.api.client.http.html" TARGET="_top"><B>NO FRAMES</B></A></FONT></TD>
@@ -61,99 +61,592 @@ Similarly, documentation which was inherited from another class or interface is 
 </blockquote>
 <hr>
 
-<A NAME="com.google.api.client.http.HttpResponse.dmethod.parseAs(Class&lt;T&gt;)"></A><a href="com.google.api.client.http.HttpResponse.html" class="hiddenlink">Class <b>HttpResponse</b></a>, <a href="com.google.api.client.http.HttpResponse.html#com.google.api.client.http.HttpResponse.parseAs_changed(java.lang.Class<T>)" class="hiddenlink">T <b>parseAs(Class&lt;T&gt;)</b></a><br><br><blockquote>Parses the content of the HTTP response from <A HREF="../Google HTTP Client Library for Java 1.14.1-beta/.html#getContent()"><TT>.getContent()</TT></A> and reads it into a data
- class of key/value pairs using the parser returned by <A HREF="../Google HTTP Client Library for Java 1.14.1-beta/HttpRequest.html#getParser()"><TT>HttpRequest.getParser()</TT></A>.
+<A NAME="com.google.api.client.http.AbstractInputStreamContent!class"></A><a href="com.google.api.client.http.AbstractInputStreamContent.html" class="hiddenlink">Class <b>AbstractInputStreamContent</b></a><br><br><blockquote>Serializes HTTP request content from an input stream into an output stream.
 
  <p>
- <b>Reference:</b> http://tools.ietf.org/html/rfc2616#section-4.3
+ The <A HREF="../Google HTTP Client Library for Java 1.14.1-beta/com/google/api/client/http/AbstractInputStreamContent/.html#type"><TT>.type</TT></A> field is required. Subclasses should implement the <A HREF="../Google HTTP Client Library for Java 1.14.1-beta/com/google/api/client/http/AbstractInputStreamContent/.html#getLength()"><TT>.getLength()</TT></A>,
+ <A HREF="../Google HTTP Client Library for Java 1.14.1-beta/com/google/api/client/http/AbstractInputStreamContent/.html#getInputStream()"><TT>.getInputStream()</TT></A>, and <A HREF="../Google HTTP Client Library for Java 1.14.1-beta/com/google/api/client/http/AbstractInputStreamContent/.html#retrySupported()"><TT>.retrySupported()</TT></A> for their specific type of input stream.
+ <strike>If you need to limit the amount of content read from the input stream, you may use
+ LimitInputStream.
+ 
+
+ 
+ Implementations don't need to be thread-safe.
+ 
+
+ 
+ </strike>By default, all content is read from the input stream. If instead you want to limit the maximum
+ amount of content read from the input stream, you may <strike>use </strike><span style="background: #FFFF00">use
+ <A HREF="../Google HTTP Client Library for Java 1.14.1-beta/com/google/api/client/http/AbstractInputStreamContent/ByteStreams.html#limit(InputStream, long)"></span><TT><strike>LimitInputStream</strike><span style="background: #FFFF00">ByteStreams.limit(InputStream, long)</span></TT></A>.
+ <p><span style="background: #FFFF00">
+
+ <p>
+ Implementations don't need to be thread-safe.
+ </span></p>
+
+ @since 1.4
+ @author moshenko@google.com (Jacob Moshenko)</blockquote>
+<A NAME="com.google.api.client.http.AbstractInputStreamContent.dmethod.copy(InputStream, OutputStream)"></A><a href="com.google.api.client.http.AbstractInputStreamContent.html" class="hiddenlink">Class <b>AbstractInputStreamContent</b></a>, <a href="com.google.api.client.http.AbstractInputStreamContent.html#com.google.api.client.http.AbstractInputStreamContent.copy_changed(java.io.InputStream, java.io.OutputStream)" class="hiddenlink">void <b>copy(InputStream, OutputStream)</b></a><br><br><blockquote>Writes the content provided by the given source input stream into the given destination output
+ stream.
+
+ <p>
+ The input stream is guaranteed to be closed at the end of this method.
+ </p>
+
+ <p>
+ Sample use:<span style="background: #FFFF00">
+ </p></span>
+
+ <pre>
+  static void downloadMedia(HttpResponse response, File file)
+      throws IOException {
+    FileOutputStream out = new FileOutputStream(file);
+    try {
+      AbstractInputStreamContent.copy(response.getContent(), out);
+    } finally {
+      out.close();
+    }
+  }
+ </pre><strike>
+ </strike>
+
+ @param inputStream source input stream
+ @param outputStream destination output <strike>stream</strike><span style="background: #FFFF00">stream
+ @deprecated (scheduled to be removed in 1.15) Use
+             <A HREF="../Google HTTP Client Library for Java 1.14.1-beta/IOUtils.html#copy(InputStream, OutputStream)"><TT>IOUtils.copy(InputStream, OutputStream)</TT></A> instead</span></blockquote>
+<A NAME="com.google.api.client.http.AbstractInputStreamContent.dmethod.copy(InputStream, OutputStream, boolean)"></A><a href="com.google.api.client.http.AbstractInputStreamContent.html" class="hiddenlink">Class <b>AbstractInputStreamContent</b></a>, <a href="com.google.api.client.http.AbstractInputStreamContent.html#com.google.api.client.http.AbstractInputStreamContent.copy_changed(java.io.InputStream, java.io.OutputStream, boolean)" class="hiddenlink">void <b>copy(InputStream, OutputStream, boolean)</b></a><br><br><blockquote>Writes the content provided by the given source input stream into the given destination output
+ stream.
+
+ <p>
+ Sample use:
+ </p>
+
+ <pre>
+  static void downloadMedia(HttpResponse response, File file)
+      throws IOException {
+    FileOutputStream out = new FileOutputStream(file);
+    try {
+      AbstractInputStreamContent.copy(response.getContent(), out, true);
+    } finally {
+      out.close();
+    }
+  }
+ </pre>
+
+ @param inputStream source input stream
+ @param outputStream destination output stream
+ @param closeInputStream whether the input stream should be closed at the end of this method
+ @since 1.<strike>7</strike><span style="background: #FFFF00">7
+ @deprecated (scheduled to be removed in 1.15) Use
+             <A HREF="../Google HTTP Client Library for Java 1.14.1-beta/IOUtils.html#copy(InputStream, OutputStream, boolean)"><TT>IOUtils.copy(InputStream, OutputStream, boolean)</TT></A> instead</span></blockquote>
+<A NAME="com.google.api.client.http.AbstractInputStreamContent.dmethod.setEncoding(String)"></A><a href="com.google.api.client.http.AbstractInputStreamContent.html" class="hiddenlink">Class <b>AbstractInputStreamContent</b></a>, <a href="com.google.api.client.http.AbstractInputStreamContent.html#com.google.api.client.http.AbstractInputStreamContent.setEncoding_changed(java.lang.String)" class="hiddenlink">AbstractInputStreamContent <b>setEncoding(String)</b></a><br><br><blockquote>Sets the content encoding (for example {@code "gzip"}) or {@code null} for none. Subclasses
+ should override by calling super.
+
+ @since 1.<strike>5</strike><span style="background: #FFFF00">5
+ @deprecated (scheduled to be removed in 1.15) Use <A HREF="../Google HTTP Client Library for Java 1.14.1-beta/HttpEncoding.html"><TT>HttpEncoding</TT></A> instead.</span></blockquote>
+<hr align="left" width="100%">
+<A NAME="com.google.api.client.http.ExponentialBackOffPolicy.Builder.dmethod.getRandomizationFactor()"></A><a href="com.google.api.client.http.ExponentialBackOffPolicy.Builder.html" class="hiddenlink">Class <b>ExponentialBackOffPolicy.Builder</b></a>, <a href="com.google.api.client.http.ExponentialBackOffPolicy.Builder.html#com.google.api.client.http.ExponentialBackOffPolicy.Builder.getRandomizationFactor_changed()" class="hiddenlink">double <b>getRandomizationFactor()</b></a><br><br><blockquote>Returns the randomization factor to use for creating a range around the retry interval. The
+ default value is <A HREF="../Google HTTP Client Library for Java 1.14.1-beta/.html#DEFAULT_RANDOMIZATION_FACTOR"><TT>.DEFAULT_RANDOMIZATION_FACTOR</TT></A>.
+
+ <p>
+ A randomization factor of 0.5 results in a random period ranging between 50% below and 50%
+ above the retry interval.
+ </p><span style="background: #FFFF00">
+
+ <p>
+ Overriding is only supported for the purpose of calling the super implementation and changing
+ the return type, but nothing else.
+ </p></span></blockquote>
+<A NAME="com.google.api.client.http.ExponentialBackOffPolicy.Builder.dmethod.setInitialIntervalMillis(int)"></A><a href="com.google.api.client.http.ExponentialBackOffPolicy.Builder.html" class="hiddenlink">Class <b>ExponentialBackOffPolicy.Builder</b></a>, <a href="com.google.api.client.http.ExponentialBackOffPolicy.Builder.html#com.google.api.client.http.ExponentialBackOffPolicy.Builder.setInitialIntervalMillis_changed(int)" class="hiddenlink">Builder <b>setInitialIntervalMillis(int)</b></a><br><br><blockquote>Sets the initial retry interval in milliseconds. The default value is
+ <A HREF="../Google HTTP Client Library for Java 1.14.1-beta/.html#DEFAULT_INITIAL_INTERVAL_MILLIS"><TT>.DEFAULT_INITIAL_INTERVAL_MILLIS</TT></A>. Must be {@code > 0}.<span style="background: #FFFF00">
+
+ <p>
+ Overriding is only supported for the purpose of calling the super implementation and changing
+ the return type, but nothing else.
+ </p></span></blockquote>
+<A NAME="com.google.api.client.http.ExponentialBackOffPolicy.Builder.dmethod.setMaxElapsedTimeMillis(int)"></A><a href="com.google.api.client.http.ExponentialBackOffPolicy.Builder.html" class="hiddenlink">Class <b>ExponentialBackOffPolicy.Builder</b></a>, <a href="com.google.api.client.http.ExponentialBackOffPolicy.Builder.html#com.google.api.client.http.ExponentialBackOffPolicy.Builder.setMaxElapsedTimeMillis_changed(int)" class="hiddenlink">Builder <b>setMaxElapsedTimeMillis(int)</b></a><br><br><blockquote>Sets the maximum elapsed time in milliseconds. The default value is
+ <A HREF="../Google HTTP Client Library for Java 1.14.1-beta/.html#DEFAULT_MAX_ELAPSED_TIME_MILLIS"><TT>.DEFAULT_MAX_ELAPSED_TIME_MILLIS</TT></A>. Must be {@code > 0}.
+
+ <p>
+ If the time elapsed since an <A HREF="../Google HTTP Client Library for Java 1.14.1-beta/ExponentialBackOffPolicy.html"><TT>ExponentialBackOffPolicy</TT></A> instance is created goes past
+ the max_elapsed_time then the method <A HREF="../Google HTTP Client Library for Java 1.14.1-beta/.html#getNextBackOffMillis()"><TT>.getNextBackOffMillis()</TT></A> starts returning
+ <A HREF="../Google HTTP Client Library for Java 1.14.1-beta/BackOffPolicy.html#STOP"><TT>BackOffPolicy.STOP</TT></A>. The elapsed time can be reset by calling <A HREF="../Google HTTP Client Library for Java 1.14.1-beta/.html#reset()"><TT>.reset()</TT></A>.
+ </p><span style="background: #FFFF00">
+
+ <p>
+ Overriding is only supported for the purpose of calling the super implementation and changing
+ the return type, but nothing else.
+ </p></span></blockquote>
+<A NAME="com.google.api.client.http.ExponentialBackOffPolicy.Builder.dmethod.setMaxIntervalMillis(int)"></A><a href="com.google.api.client.http.ExponentialBackOffPolicy.Builder.html" class="hiddenlink">Class <b>ExponentialBackOffPolicy.Builder</b></a>, <a href="com.google.api.client.http.ExponentialBackOffPolicy.Builder.html#com.google.api.client.http.ExponentialBackOffPolicy.Builder.setMaxIntervalMillis_changed(int)" class="hiddenlink">Builder <b>setMaxIntervalMillis(int)</b></a><br><br><blockquote>Sets the maximum value of the back off period in milliseconds. Once the current interval
+ reaches this value it stops increasing. The default value is
+ <A HREF="../Google HTTP Client Library for Java 1.14.1-beta/.html#DEFAULT_MAX_INTERVAL_MILLIS"><TT>.DEFAULT_MAX_INTERVAL_MILLIS</TT></A>.<span style="background: #FFFF00">
+
+ <p>
+ Overriding is only supported for the purpose of calling the super implementation and changing
+ the return type, but nothing else.
+ </p></span></blockquote>
+<A NAME="com.google.api.client.http.ExponentialBackOffPolicy.Builder.dmethod.setMultiplier(double)"></A><a href="com.google.api.client.http.ExponentialBackOffPolicy.Builder.html" class="hiddenlink">Class <b>ExponentialBackOffPolicy.Builder</b></a>, <a href="com.google.api.client.http.ExponentialBackOffPolicy.Builder.html#com.google.api.client.http.ExponentialBackOffPolicy.Builder.setMultiplier_changed(double)" class="hiddenlink">Builder <b>setMultiplier(double)</b></a><br><br><blockquote>Sets the value to multiply the current interval with for each retry attempt. The default
+ value is <A HREF="../Google HTTP Client Library for Java 1.14.1-beta/.html#DEFAULT_MULTIPLIER"><TT>.DEFAULT_MULTIPLIER</TT></A>. Must be {@code >= 1}.<span style="background: #FFFF00">
+
+ <p>
+ Overriding is only supported for the purpose of calling the super implementation and changing
+ the return type, but nothing else.
+ </p></span></blockquote>
+<A NAME="com.google.api.client.http.ExponentialBackOffPolicy.Builder.dmethod.setRandomizationFactor(double)"></A><a href="com.google.api.client.http.ExponentialBackOffPolicy.Builder.html" class="hiddenlink">Class <b>ExponentialBackOffPolicy.Builder</b></a>, <a href="com.google.api.client.http.ExponentialBackOffPolicy.Builder.html#com.google.api.client.http.ExponentialBackOffPolicy.Builder.setRandomizationFactor_changed(double)" class="hiddenlink">Builder <b>setRandomizationFactor(double)</b></a><br><br><blockquote>Sets the randomization factor to use for creating a range around the retry interval. The
+ default value is <A HREF="../Google HTTP Client Library for Java 1.14.1-beta/.html#DEFAULT_RANDOMIZATION_FACTOR"><TT>.DEFAULT_RANDOMIZATION_FACTOR</TT></A>. Must fall in the range
+ {@code 0 < randomizationFactor <1}.
+
+ <p>
+ A randomization factor of 0.5 results in a random period ranging between 50% below and 50%
+ above the retry interval.
+ </p><span style="background: #FFFF00">
+
+ <p>
+ Overriding is only supported for the purpose of calling the super implementation and changing
+ the return type, but nothing else.
+ </p></span></blockquote>
+<hr align="left" width="100%">
+<A NAME="com.google.api.client.http.GenericUrl.ctor(String)"></A><a href="com.google.api.client.http.GenericUrl.html" class="hiddenlink">Class <b>GenericUrl</b></a>, <a href="com.google.api.client.http.GenericUrl.html#com.google.api.client.http.GenericUrl.ctor_changed(java.lang.String)" class="hiddenlink">constructor <b>GenericUrl(String)</b></a><br><br><blockquote>Constructs from an encoded URL.<strike>
+</strike><span style="background: #FFFF00">
+
+</span> <p>
+ Any known query parameters with pre-defined fields as data keys will be parsed based on their
+ data type. Any unrecognized query parameter will always be parsed as a string.<span style="background: #FFFF00">
+ </p>
+
+ <p>
+ Any <A HREF="../Google HTTP Client Library for Java 1.14.1-beta/URISyntaxException.html"><TT>URISyntaxException</TT></A> is wrapped in an <A HREF="../Google HTTP Client Library for Java 1.14.1-beta/IllegalArgumentException.html"><TT>IllegalArgumentException</TT></A>.
+ </p></span>
+
+ @param encodedUrl encoded URL, including any existing query parameters that should be parsed
+ @throws IllegalArgumentException if URL has a syntax error</blockquote>
+<hr align="left" width="100%">
+<A NAME="com.google.api.client.http.HttpContent.dmethod.getEncoding()"></A><a href="com.google.api.client.http.HttpContent.html" class="hiddenlink">Class <b>HttpContent</b></a>, <a href="com.google.api.client.http.HttpContent.html#com.google.api.client.http.HttpContent.getEncoding_changed()" class="hiddenlink">String <b>getEncoding()</b></a><br><br><blockquote>Returns the content encoding (for example {@code "gzip"}) or {@code null} for none.<span style="background: #FFFF00">
+
+ @deprecated (scheduled to be removed in 1.15) Use <A HREF="../Google HTTP Client Library for Java 1.14.1-beta/HttpEncoding.html"><TT>HttpEncoding</TT></A> instead</span></blockquote>
+<A NAME="com.google.api.client.http.HttpContent.dmethod.writeTo(OutputStream)"></A><a href="com.google.api.client.http.HttpContent.html" class="hiddenlink">Class <b>HttpContent</b></a>, <a href="com.google.api.client.http.HttpContent.html#com.google.api.client.http.HttpContent.writeTo_changed(java.io.OutputStream)" class="hiddenlink">void <b>writeTo(OutputStream)</b></a><br><br><blockquote><strike>Writes the content to the given output stream.</strike><span style="background: #FFFF00">{@inheritDoc}</span>
+
+ <p>
+ <strike>The recommendation for implementations is</strike><span style="background: #FFFF00">Upgrade</span> <strike>that</strike><span style="background: #FFFF00">warning:</span> <strike>they should not</strike><span style="background: #FFFF00">in prior version</span> <strike>close</strike><span style="background: #FFFF00">1.13</span> the <strike>output stream.</strike><span style="background: #FFFF00">implementation</span> <strike>Callers
+ should not assume whether or not</strike><span style="background: #FFFF00">of this method was allowed to close
+</span> the <strike>output </strike>stream<strike> has</strike><span style="background: #FFFF00">,</span> <strike>been</strike><span style="background: #FFFF00">but</span> <strike>closed. Implementations that</strike><span style="background: #FFFF00">starting</span> <strike>do</strike><span style="background: #FFFF00">with</span> <strike>not
+</strike><span style="background: #FFFF00">1.14</span> <strike>close</strike><span style="background: #FFFF00">closing</span> the <strike>output </strike>stream <strike>should flush it at the end</strike><span style="background: #FFFF00">is</span> <strike>of the method</strike><span style="background: #FFFF00">no longer allowed</span>.
+ </p></blockquote>
+<hr align="left" width="100%">
+<A NAME="com.google.api.client.http.HttpHeaders!class"></A><a href="com.google.api.client.http.HttpHeaders.html" class="hiddenlink">Class <b>HttpHeaders</b></a><br><br><blockquote>Stores HTTP headers used in an HTTP request or response, as defined in <a
+ href="http://tools.ietf.org/html/rfc2616#section-14">Header Field Definitions</a>.
+
+ <p>
+ {@code null} is not allowed as a name or value of a header. Names are case-insensitive.
+ </p>
+
+ <p>
+ Implementation is not thread-safe.
+ </p>
+
+ <strike>
+ Upgrade warning: in prior version 1.12 most fields were stored internally as a string, but as of
+ version 1.13 those fields are now stored internally as a list of string. Thus, any use of methods
+ like .get(Object) or .set(String, Object) that expose the internal implementation
+ may be broken in a backwards-incompatible way.
+ 
+
+ </strike>@since 1.0
+ @author Yaniv Inbar</blockquote>
+<A NAME="com.google.api.client.http.HttpHeaders.dmethod.fromHttpResponse(LowLevelHttpResponse, StringBuilder)"></A><a href="com.google.api.client.http.HttpHeaders.html" class="hiddenlink">Class <b>HttpHeaders</b></a>, <a href="com.google.api.client.http.HttpHeaders.html#com.google.api.client.http.HttpHeaders.fromHttpResponse_changed(com.google.api.client.http.LowLevelHttpResponse, java.lang.StringBuilder)" class="hiddenlink">void <b>fromHttpResponse(LowLevelHttpResponse, StringBuilder)</b></a><br><br><blockquote>Puts all headers of the <A HREF="../Google HTTP Client Library for Java 1.14.1-beta/LowLevelHttpResponse.html"><TT>LowLevelHttpResponse</TT></A> into this <A HREF="../Google HTTP Client Library for Java 1.14.1-beta/HttpHeaders.html"><TT>HttpHeaders</TT></A> object.
+
+ <p>
+ Upgrade warning: <strike>this method now</strike><span style="background: #FFFF00">in prior version</span> <strike>throws</strike><span style="background: #FFFF00">1.13</span> <strike>an</strike><span style="background: #FFFF00">it</span> <strike>IOException.</strike><span style="background: #FFFF00">did not</span> <strike>In prior</strike><span style="background: #FFFF00">clear the</span> <span style="background: #FFFF00">headers before parsing the
+ response, but starting in </span>version 1.<strike>11</strike><span style="background: #FFFF00">14</span> it <strike>did
+</strike><span style="background: #FFFF00">does</span> <strike>not throw an exception</strike><span style="background: #FFFF00">clear the headers first</span>.
+ </p>
+
+ @param response Response from which the headers are copied
+ @param logger <A HREF="../Google HTTP Client Library for Java 1.14.1-beta/StringBuilder.html"><TT>StringBuilder</TT></A> to which logging output is added or {@code null} to disable
+        logging
+ @since 1.10</blockquote>
+<hr align="left" width="100%">
+<A NAME="com.google.api.client.http.HttpRequest.dmethod.executeAsync(Executor)"></A><a href="com.google.api.client.http.HttpRequest.html" class="hiddenlink">Class <b>HttpRequest</b></a>, <a href="com.google.api.client.http.HttpRequest.html#com.google.api.client.http.HttpRequest.executeAsync_changed(java.util.concurrent.Executor)" class="hiddenlink">Future&lt;HttpResponse&gt; <b>executeAsync(Executor)</b></a><br><br><blockquote>Executes this request asynchronously <strike>using .executeAsync(Executor) </strike>in a single <strike>separate
+</strike><span style="background: #FFFF00">separate</span> thread using the supplied <strike>Executor</strike><span style="background: #FFFF00">executor</span>.
+
+ @param <strike>exec An</strike><span style="background: #FFFF00">executor</span> executor to run the <strike>synchronous HttpRequest
+</strike><span style="background: #FFFF00">asynchronous request
+</span> @return <strike>A </strike>future for accessing the <strike>results of the asynchronous</strike><span style="background: #FFFF00">HTTP</span> <strike>request.
+</strike><span style="background: #FFFF00">response
+</span> @since 1.13</blockquote>
+<A NAME="com.google.api.client.http.HttpRequest.dmethod.getEnableGZipContent()"></A><a href="com.google.api.client.http.HttpRequest.html" class="hiddenlink">Class <b>HttpRequest</b></a>, <a href="com.google.api.client.http.HttpRequest.html#com.google.api.client.http.HttpRequest.getEnableGZipContent_changed()" class="hiddenlink">boolean <b>getEnableGZipContent()</b></a><br><br><blockquote>Returns whether to enable gzip compression of HTTP content.
+
+ @since 1.<strike>5</strike><span style="background: #FFFF00">5
+ @deprecated (scheduled to be removed in 1.15) Use <A HREF="../Google HTTP Client Library for Java 1.14.1-beta/.html#getEncoding()"><TT>.getEncoding()</TT></A> instead.</span></blockquote>
+<A NAME="com.google.api.client.http.HttpRequest.dmethod.handleRedirect(int, HttpHeaders)"></A><a href="com.google.api.client.http.HttpRequest.html" class="hiddenlink">Class <b>HttpRequest</b></a>, <a href="com.google.api.client.http.HttpRequest.html#com.google.api.client.http.HttpRequest.handleRedirect_changed(int, com.google.api.client.http.HttpHeaders)" class="hiddenlink">boolean <b>handleRedirect(int, HttpHeaders)</b></a><br><br><blockquote>Sets up this request object to handle the necessary redirect if redirects are turned on, it is
+ a redirect status code and the header has a location.
+
+ <p>
+ When the status code is {@code 303} the method on the request is changed to a GET as per the
+ RFC2616 specification.<span style="background: #FFFF00"> On a redirect, it also removes the {@code "Authorization"} and all
+ {@code "If-*"} request headers.
+ </p>
+
+ <p>
+ Upgrade warning: in prior version 1.13 all request headers were retained, but starting with
+ version 1.14 it now removes the {@code "Authorization"} and all {@code "If-*"} request headers.</span>
+ </p>
+
+ @<span style="background: #FFFF00">return whether the redirect was successful
+ @</span>since 1.11</blockquote>
+<A NAME="com.google.api.client.http.HttpRequest.dmethod.setEnableGZipContent(boolean)"></A><a href="com.google.api.client.http.HttpRequest.html" class="hiddenlink">Class <b>HttpRequest</b></a>, <a href="com.google.api.client.http.HttpRequest.html#com.google.api.client.http.HttpRequest.setEnableGZipContent_changed(boolean)" class="hiddenlink">HttpRequest <b>setEnableGZipContent(boolean)</b></a><br><br><blockquote>Returns whether to enable gzip compression of HTTP content.
+
+ <p>
+ By default it is {@code false}.
+ </p>
+
+ <p>
+ To avoid the overhead of GZip compression for small content, one may want to set this to
+ {@code true} only for <A HREF="../Google HTTP Client Library for Java 1.14.1-beta/HttpContent.html#getLength()"><TT>HttpContent.getLength()</TT></A> above a certain limit. For example:
+ </p>
+
+ <pre>
+  public static class MyInterceptor implements HttpExecuteInterceptor {
+    public void intercept(HttpRequest request) throws IOException {
+      if (request.getContent() != null && request.getContent().getLength() >= 256) {
+        request.setEnableGZipContent(true);
+      }
+    }
+  }
+ </pre>
+
+ <p><span style="background: #FFFF00">
+ Warning: this will override any encoding for the request set in
+ <A HREF="../Google HTTP Client Library for Java 1.14.1-beta/.html#setEncoding(HttpEncoding)"><TT>.setEncoding(HttpEncoding)</TT></A>
+ </p>
+
+ </span>@since 1.<strike>5</strike><span style="background: #FFFF00">5
+ @deprecated (scheduled to be removed in 1.15) Use <A HREF="../Google HTTP Client Library for Java 1.14.1-beta/.html#setEncoding(HttpEncoding)"><TT>.setEncoding(HttpEncoding)</TT></A> with
+             <A HREF="../Google HTTP Client Library for Java 1.14.1-beta/GZipEncoding.html"><TT>GZipEncoding</TT></A> instead.</span></blockquote>
+<hr align="left" width="100%">
+<A NAME="com.google.api.client.http.HttpResponse.dmethod.parseAs(Class&lt;T&gt;)"></A><a href="com.google.api.client.http.HttpResponse.html" class="hiddenlink">Class <b>HttpResponse</b></a>, <a href="com.google.api.client.http.HttpResponse.html#com.google.api.client.http.HttpResponse.parseAs_changed(java.lang.Class<T>)" class="hiddenlink">T <b>parseAs(Class&lt;T&gt;)</b></a><br><br><blockquote>Parses the content of the HTTP response from <A HREF="../Google HTTP Client Library for Java 1.14.1-beta/.html#getContent()"><TT>.getContent()</TT></A> and reads it into a data
+ class of key/value pairs using the parser returned by <A HREF="../Google HTTP Client Library for Java 1.14.1-beta/HttpRequest.html#getParser()"><TT><span style="background: #FFFF00">HttpRequest</span>.getParser()</TT></A>.
+
+ <p>
+ <b><strike>Upgrade Warning: Prior to version 1.11 this method would throw an
+ IllegalArgumentException when no Content-Type is present in the response and the
+ deprecated HttpParsers were used. Since 1.11 this method will return {@code null} as documented
+ when the server responds with a status code indicating that there is no content, or when a HEAD
+ request was made to the server.
+ 
+
+ 
+ </strike>Reference:</b> http://tools.ietf.org/html/rfc2616#section-4.3
  </p>
 
  @return parsed data class or {@code null} for no <strike>content
+ @throws IOException I/O exception
  @throws IllegalArgumentException if no parser is defined for the given </strike>content<strike> type</strike></blockquote>
+<A NAME="com.google.api.client.http.HttpResponse.dmethod.parseAs(Type)"></A><a href="com.google.api.client.http.HttpResponse.html" class="hiddenlink">Class <b>HttpResponse</b></a>, <a href="com.google.api.client.http.HttpResponse.html#com.google.api.client.http.HttpResponse.parseAs_changed(java.lang.reflect.Type)" class="hiddenlink">Object <b>parseAs(Type)</b></a><br><br><blockquote>Parses the content of the HTTP response from <A HREF="../Google HTTP Client Library for Java 1.14.1-beta/.html#getContent()"><TT>.getContent()</TT></A> and reads it into a data
+ type of key/value pairs using the parser returned by <A HREF="../Google HTTP Client Library for Java 1.14.1-beta/HttpRequest.html#getParser()"><TT><span style="background: #FFFF00">HttpRequest</span>.getParser()</TT></A>.
+
+ @return parsed data type instance or {@code null} for no content
+ @<strike>throws IOException I/O exception
+ @throws IllegalArgumentException if no parser is defined for this response
+ @</strike>since 1.10</blockquote>
 <hr align="left" width="100%">
-<A NAME="com.google.api.client.http.UriTemplate!class"></A><a href="com.google.api.client.http.UriTemplate.html" class="hiddenlink">Class <b>UriTemplate</b></a><br><br><blockquote>Expands URI Templates.
+<A NAME="com.google.api.client.http.HttpResponseException!class"></A><a href="com.google.api.client.http.HttpResponseException.html" class="hiddenlink">Class <b>HttpResponseException</b></a><br><br><blockquote>Exception thrown when an error status code is detected in an HTTP response.
 
- This Class supports Level 1 templates and all Level 4 composite templates as described in:
- <strike>RFC</strike><a href="http://tools.ietf.org/html/draft-gregorio-uritemplate-07"><span style="background: #FFFF00">URI</span> <strike>6570</strike><span style="background: #FFFF00">Template</span></a>.
-
- Specifically, for the variables:
- var := "value"
- list := ["red", "green", "blue"]
- keys := [("semi", ";"),("dot", "."),("comma", ",")]
-
- The following templates results in the following expansions:
- {var}     ->   value
- {list}    ->   red,green,blue
- {list*}   ->   red,green,blue
- {<strike>keys</strike><span style="background: #FFFF00">key</span>}    <span style="background: #FFFF00"> </span>->   semi,%3B,dot,.,comma,%2C
- {<strike>keys</strike><span style="background: #FFFF00">key</span>*}   <span style="background: #FFFF00"> </span>->   semi=%3B,dot=.,comma=%2C
- {+list}   ->   red,green,blue
- {+list*}  ->   red,green,blue
- {+<strike>keys</strike><span style="background: #FFFF00">key</span>}   <span style="background: #FFFF00"> </span>->   semi,;,dot,.,comma,,
- {+<strike>keys</strike><span style="background: #FFFF00">key</span>*}  <span style="background: #FFFF00"> </span>->   semi=;,dot=.,comma=,
- {#list}   ->   #red,green,blue
- {#list*}  ->   #red,green,blue
- {#<strike>keys</strike><span style="background: #FFFF00">key</span>}   <span style="background: #FFFF00"> </span>->   #semi,;,dot,.,comma,,
- {#<strike>keys</strike><span style="background: #FFFF00">key</span>*}  <span style="background: #FFFF00"> </span>->   #semi=;,dot=.,comma=,
- X{.list}  ->   X.red,green,blue
- X{.list*} ->   X.red.green.blue
- X{.<strike>keys</strike><span style="background: #FFFF00">key</span>} <strike> </strike>-<span style="background: #FFFF00">  </span>>   X.semi,%3B,dot,.,comma,%2C
- X{.<strike>keys</strike><span style="background: #FFFF00">key</span>*} <span style="background: #FFFF00"> </span>->   X.semi=%3B.dot=..comma=%2C
- {/list}   ->   /red,green,blue
- {/list*}  ->   /red/green/blue
- {/<strike>keys</strike><span style="background: #FFFF00">key</span>}   <span style="background: #FFFF00"> </span>->   /semi,%3B,dot,.,comma,%2C
- {/<strike>keys</strike><span style="background: #FFFF00">key</span>*}  <span style="background: #FFFF00"> </span>->   /semi=%3B/dot=./comma=%2C
- {;list}   ->   ;list=red,green,blue
- {;list*}  ->   ;<strike>list=</strike>red;<strike>list=</strike>green;<strike>list=</strike>blue
- {;<strike>keys</strike><span style="background: #FFFF00">key</span>}   <span style="background: #FFFF00"> </span>->   ;keys=semi,%3B,dot,.,comma,%2C
- {;<strike>keys</strike><span style="background: #FFFF00">key</span>*}  <span style="background: #FFFF00"> </span>->   ;semi=%3B;dot=.;comma=%2C
- {?list}   ->   ?list=red,green,blue
- {?list*}  ->   ?<strike>list=</strike>red&<strike>list=</strike>green&<strike>list=</strike>blue
- {?<strike>keys</strike><span style="background: #FFFF00">key</span>}   <span style="background: #FFFF00"> </span>->   ?keys=semi,%3B,dot,.,comma,%2C
- {?<strike>keys</strike><span style="background: #FFFF00">key</span>*}  <span style="background: #FFFF00"> </span>->   ?semi=%3B&dot=.&comma=%2C
- {&list}   ->   &list=red,green,blue
- {&list*}  ->   &<strike>list=</strike>red&<strike>list=</strike>green&<strike>list=</strike>blue
- {&<strike>keys</strike><span style="background: #FFFF00">key</span>}   <span style="background: #FFFF00"> </span>->   &keys=semi,%3B,dot,.,comma,%2C
- {&<strike>keys</strike><span style="background: #FFFF00">key</span>*}  <span style="background: #FFFF00"> </span>->   &semi=%3B&dot=.&comma=%2C
-
- @since 1.6
- @author Ravi Mistry</blockquote>
-<A NAME="com.google.api.client.http.UriTemplate.dmethod.expand(String, Object, boolean)"></A><a href="com.google.api.client.http.UriTemplate.html" class="hiddenlink">Class <b>UriTemplate</b></a>, <a href="com.google.api.client.http.UriTemplate.html#com.google.api.client.http.UriTemplate.expand_changed(java.lang.String, java.lang.Object, boolean)" class="hiddenlink">String <b>expand(String, Object, boolean)</b></a><br><br><blockquote>Expands templates in a URI.
-
- <p>
- Supports Level 1 templates and all Level 4 composite templates as described in:
- <strike>RFC</strike><a href="http://tools.ietf.org/html/draft-gregorio-uritemplate-07"><span style="background: #FFFF00">URI</span> <strike>6570</strike><span style="background: #FFFF00">Template</span></a>.
+ <p><span style="background: #FFFF00">
+ Implementation is not thread safe.
  </p>
 
- @param pathUri URI component. It may contain one or more sequences of the form "{name}", where
-        "name" must be a key in variableMap
- @param parameters an object with parameters designated by Key annotations. If the template has
-        no variable references, parameters may be {@code null}.
- @param addUnusedParamsAsQueryParams If true then parameters that do not match the template are
-        appended to the expanded template as query parameters.
- @return The expanded template
- @since 1.6</blockquote>
-<A NAME="com.google.api.client.http.UriTemplate.dmethod.expand(String, String, Object, boolean)"></A><a href="com.google.api.client.http.UriTemplate.html" class="hiddenlink">Class <b>UriTemplate</b></a>, <a href="com.google.api.client.http.UriTemplate.html#com.google.api.client.http.UriTemplate.expand_changed(java.lang.String, java.lang.String, java.lang.Object, boolean)" class="hiddenlink">String <b>expand(String, String, Object, boolean)</b></a><br><br><blockquote>Expands templates in a URI template that is relative to a base URL.
+ </span>@since 1.0
+ @author Yaniv Inbar</blockquote>
+<A NAME="com.google.api.client.http.HttpResponseException.ctor(HttpResponse, String)"></A><a href="com.google.api.client.http.HttpResponseException.html" class="hiddenlink">Class <b>HttpResponseException</b></a>, <a href="com.google.api.client.http.HttpResponseException.html#com.google.api.client.http.HttpResponseException.ctor_changed(com.google.api.client.http.HttpResponse, java.lang.String)" class="hiddenlink">constructor <b>HttpResponseException(HttpResponse, String)</b></a><br><br><blockquote>Constructor that allows an alternative detail message to be used.
 
  <p>
- If the URI template starts with a "/" the raw path from the base URL is stripped out. If the
- URI template is a full URL then it is used instead of the base URL.
+ Callers of this constructor should call <A HREF="../Google HTTP Client Library for Java 1.14.1-beta/HttpResponse.html#disconnect"><TT>HttpResponse.disconnect</TT></A> after
+ <A HREF="../Google HTTP Client Library for Java 1.14.1-beta/HttpResponseException.html"><TT>HttpResponseException</TT></A> is instantiated. Example usage:
+ </p>
+
+ <pre>
+     try {
+       throw new HttpResponseException(response, message);
+     } finally {
+       response.disconnect();
+     }
+ </pre>
+
+ @param response HTTP response
+ @param message detail message to use or {@code null} for none
+ @since 1.<strike>6</strike><span style="background: #FFFF00">6
+ @deprecated (scheduled to be removed in 1.15) Use <A HREF="../Google HTTP Client Library for Java 1.14.1-beta/.html#HttpResponseException(Builder)"><TT>.HttpResponseException(Builder)</TT></A>
+             instead</span></blockquote>
+<hr align="left" width="100%">
+<A NAME="com.google.api.client.http.HttpResponseInterceptor!class"></A><a href="com.google.api.client.http.HttpResponseInterceptor.html" class="hiddenlink">Class <b>HttpResponseInterceptor</b></a><br><br><blockquote>HTTP response interceptor to intercept the end of <A HREF="../Google HTTP Client Library for Java 1.14.1-beta/com/google/api/client/http/HttpResponseInterceptor/HttpRequest.html#execute()"><TT>HttpRequest.execute()</TT></A> before returning
+ a successful response or throwing an exception for an unsuccessful response.
+
+ <p>
+ For example, this might be used to add a simple timer on requests:
+ </p>
+
+ <pre>
+  public static class TimerResponseInterceptor implements HttpResponseInterceptor {
+
+    private final long startTime = System.nanoTime();
+
+    public void interceptResponse(HttpResponse response) {
+      long elapsedNanos = System.nanoTime() - startTime;
+      System.out.println("elapsed seconds: " + TimeUnit.NANOSECONDS.toSeconds(elapsedNanos) + "s");
+    }
+  }
+ </pre>
+
+ <p>
+ Sample usage with a request factory:
+ </p>
+
+ <pre>
+  public static HttpRequestFactory createRequestFactory(HttpTransport transport) {
+    return transport.createRequestFactory(new HttpRequestInitializer() {
+
+      <span style="background: #FFFF00">{@literal </span>@<span style="background: #FFFF00">}</span>Override
+      public void initialize(HttpRequest request) {
+        request.setResponseInterceptor(new TimerResponseInterceptor());
+      }
+    });
+  }
+ </pre>
+
+ <p>
+ More complex usage example:
+ </p>
+
+ <pre>
+  public static HttpRequestFactory createRequestFactory2(HttpTransport transport) {
+    final HttpResponseInterceptor responseInterceptor = new TimerResponseInterceptor();
+    return transport.createRequestFactory(new HttpRequestInitializer() {
+
+      public void initialize(HttpRequest request) {
+        request.setResponseInterceptor(new HttpResponseInterceptor() {
+
+          public void interceptResponse(HttpResponse response) throws IOException {
+            responseInterceptor.interceptResponse(response);
+          }
+        });
+      }
+    });
+  }
+ </pre>
+
+ <p>
+ Implementations should normally be thread-safe.
+ </p>
+
+ @author Yaniv Inbar
+ @since 1.13</blockquote>
+<hr align="left" width="100%">
+<A NAME="com.google.api.client.http.HttpTransport!class"></A><a href="com.google.api.client.http.HttpTransport.html" class="hiddenlink">Class <b>HttpTransport</b></a><br><br><blockquote>Thread-safe abstract HTTP transport.
+
+ <p>
+ Implementation is thread-safe, and sub-classes must be thread-safe. For maximum efficiency,
+ applications should use a single globally-shared instance of the HTTP transport.
  </p>
 
  <p>
- Supports Level 1 templates and all Level 4 composite templates as described in:
- <strike>RFC</strike><a href="http://tools.ietf.org/html/draft-gregorio-uritemplate-07"><span style="background: #FFFF00">URI</span> <strike>6570</strike><span style="background: #FFFF00">Template</span></a>.
+ The recommended concrete implementation HTTP transport library to use depends on what environment
+ you are running in:
+ </p>
+ <ul>
+ <li>Google App Engine: <strike>use</strike><span style="background: #FFFF00">use
+</span> {@code com.google.api.client.<span style="background: #FFFF00">extensions.</span>appengine.<span style="background: #FFFF00">http.</span>UrlFetchTransport}.
+ <ul>
+ <li>{@code com.google.api.client.apache.ApacheHttpTransport} doesn't work on App Engine because
+ the Apache HTTP Client opens its own sockets (though in theory there are ways to hack it to work
+ on App Engine that might work).</li>
+ <li>{@code com.google.api.client.javanet.NetHttpTransport} is discouraged due to a bug in the App
+ Engine SDK itself in how it parses HTTP headers in the response.</li>
+ </ul>
+ </li>
+ <li>Android:
+ <ul>
+ <li><strike>Starting</strike><span style="background: #FFFF00">For maximum</span> <span style="background: #FFFF00">backwards compatibility </span>with <strike>SDK</strike><span style="background: #FFFF00">older</span> <strike>2.3,</strike><span style="background: #FFFF00">SDK's</span> <strike>strongly</strike><span style="background: #FFFF00">use</span> <strike>recommended</strike><span style="background: #FFFF00">{@code</span> <strike>to</strike><span style="background: #FFFF00">newCompatibleTransport}</span> <strike>use
+</strike><span style="background: #FFFF00">from
+</span> {@code com.google.api.client.<strike>javanet</strike><span style="background: #FFFF00">extensions</span>.<strike>NetHttpTransport}</strike><span style="background: #FFFF00">android.http</span>.<span style="background: #FFFF00">AndroidHttp}</span> <strike>Their</strike><span style="background: #FFFF00">(read</span> <strike>Apache HTTP Client</strike><span style="background: #FFFF00">its JavaDoc for</span> <strike>implementation
+</strike><span style="background: #FFFF00">details).
+</span> <strike>is</strike></li><span style="background: #FFFF00">
+</span> <strike>not</strike><li><span style="background: #FFFF00">If</span> <strike>as well</strike><span style="background: #FFFF00">your application</span> <strike>maintained.
+</strike><span style="background: #FFFF00">is</span> <strike>For</strike><span style="background: #FFFF00">targeting Gingerbread</span> <span style="background: #FFFF00">(</span>SDK 2.<strike>2</strike><span style="background: #FFFF00">3)</span> <strike>and earlier</strike><span style="background: #FFFF00">or higher</span>, <strike>use {@code</strike><span style="background: #FFFF00">simply</span> <strike>com.google.api.client.apache.ApacheHttpTransport}.
+</strike><span style="background: #FFFF00">use
+</span> {@code com.google.api.client.javanet.NetHttpTransport}<strike> is not recommended due to some bugs in the
+ Android SDK implementation of HttpURLConnection</strike>.</li>
+ </ul>
+ </li>
+ <li>Other Java environments
+ <ul>
+ <li>{@code com.google.api.client.javanet.NetHttpTransport} is based on the HttpURLConnection
+ built into the Java SDK, so it is normally the preferred choice.</li>
+ <li>{@code com.google.api.client.apache.ApacheHttpTransport} is a good choice for users of the
+ Apache HTTP Client, especially if you need some of the configuration options available in that
+ library.</li>
+ </ul>
+ </li>
+ </ul>
+
+ <p>
+ Some HTTP transports do not support all HTTP methods. Use <A HREF="../Google HTTP Client Library for Java 1.14.1-beta/com/google/api/client/http/HttpTransport/.html#supportsMethod(String)"><TT>.supportsMethod(String)</TT></A> to
+ check if a certain HTTP method is supported. Calling <A HREF="../Google HTTP Client Library for Java 1.14.1-beta/com/google/api/client/http/HttpTransport/.html#buildRequest()"><TT>.buildRequest()</TT></A> on a method that is
+ not supported will result in an <A HREF="../Google HTTP Client Library for Java 1.14.1-beta/com/google/api/client/http/HttpTransport/IllegalArgumentException.html"><TT>IllegalArgumentException</TT></A>.
  </p>
 
- @param baseUrl The base URL which the URI component is relative to.
- @param uriTemplate URI component. It may contain one or more sequences of the form "{name}",
-        where "name" must be a key in variableMap.
- @param parameters an object with parameters designated by Key annotations. If the template has
-        no variable references, parameters may be {@code null}.
- @param addUnusedParamsAsQueryParams If true then parameters that do not match the template are
-        appended to the expanded template as query parameters.
- @return The expanded template
- @since 1.7</blockquote>
+ <p>
+ Subclasses should override <A HREF="../Google HTTP Client Library for Java 1.14.1-beta/com/google/api/client/http/HttpTransport/.html#supportsMethod(String)"><TT>.supportsMethod(String)</TT></A> and
+ <A HREF="../Google HTTP Client Library for Java 1.14.1-beta/com/google/api/client/http/HttpTransport/.html#buildRequest(String, String)"><TT>.buildRequest(String, String)</TT></A> to build requests and specify which HTTP methods are
+ supported.
+ </p>
+
+ @since 1.0
+ @author Yaniv Inbar</blockquote>
+<A NAME="com.google.api.client.http.HttpTransport.dmethod.buildRequest(String, String)"></A><a href="com.google.api.client.http.HttpTransport.html" class="hiddenlink">Class <b>HttpTransport</b></a>, <a href="com.google.api.client.http.HttpTransport.html#com.google.api.client.http.HttpTransport.buildRequest_changed(java.lang.String, java.lang.String)" class="hiddenlink">LowLevelHttpRequest <b>buildRequest(String, String)</b></a><br><br><blockquote>Builds a low level HTTP request for the given HTTP method.
+
+ <strike>
+ Warning: for backwards compatibility, in version 1.12 a default implementation that throws an
+ IllegalArgumentException is provided, but it will be made abstract in the next version
+ 1.13.
+ 
+
+ </strike>@param method HTTP method
+ @param url URL
+ @return new low level HTTP request
+ @throws IllegalArgumentException if HTTP method is not supported
+ @<strike>throws IOException I/O exception
+ @</strike>since 1.12</blockquote>
+<hr align="left" width="100%">
+<A NAME="com.google.api.client.http.LowLevelHttpRequest.dmethod.setContent(HttpContent)"></A><a href="com.google.api.client.http.LowLevelHttpRequest.html" class="hiddenlink">Class <b>LowLevelHttpRequest</b></a>, <a href="com.google.api.client.http.LowLevelHttpRequest.html#com.google.api.client.http.LowLevelHttpRequest.setContent_changed(com.google.api.client.http.HttpContent)" class="hiddenlink">void <b>setContent(HttpContent)</b></a><br><br><blockquote>Sets the HTTP request content.<span style="background: #FFFF00">
+
+ <p>Default implementation does nothing.</p>
+
+ @throws IOException I/O exception
+ @deprecated (scheduled to be removed in 1.15) Use <A HREF="../Google HTTP Client Library for Java 1.14.1-beta/.html#setContentLength(long)"><TT>.setContentLength(long)</TT></A>,
+             <A HREF="../Google HTTP Client Library for Java 1.14.1-beta/.html#setContentEncoding(String)"><TT>.setContentEncoding(String)</TT></A>, <A HREF="../Google HTTP Client Library for Java 1.14.1-beta/.html#setContentType(String)"><TT>.setContentType(String)</TT></A>, and
+             <A HREF="../Google HTTP Client Library for Java 1.14.1-beta/.html#setStreamingContent(StreamingContent)"><TT>.setStreamingContent(StreamingContent)</TT></A> instead.</span></blockquote>
+<hr align="left" width="100%">
+<A NAME="com.google.api.client.http.LowLevelHttpResponse.dmethod.getContentEncoding()"></A><a href="com.google.api.client.http.LowLevelHttpResponse.html" class="hiddenlink">Class <b>LowLevelHttpResponse</b></a>, <a href="com.google.api.client.http.LowLevelHttpResponse.html#com.google.api.client.http.LowLevelHttpResponse.getContentEncoding_changed()" class="hiddenlink">String <b>getContentEncoding()</b></a><br><br><blockquote>Returns the content encoding (for example {@code "gzip"}) or {@code null} for none.<strike>
+
+ 
+ Upgrade warning: this method now throws an IOException. In prior version 1.11 it did
+ not throw an exception.
+ </strike></blockquote>
+<A NAME="com.google.api.client.http.LowLevelHttpResponse.dmethod.getContentLength()"></A><a href="com.google.api.client.http.LowLevelHttpResponse.html" class="hiddenlink">Class <b>LowLevelHttpResponse</b></a>, <a href="com.google.api.client.http.LowLevelHttpResponse.html#com.google.api.client.http.LowLevelHttpResponse.getContentLength_changed()" class="hiddenlink">long <b>getContentLength()</b></a><br><br><blockquote>Returns the content length or {@code 0} for none.<strike>
+
+ 
+ Upgrade warning: this method now throws an IOException. In prior version 1.11 it did
+ not throw an exception.
+ </strike></blockquote>
+<A NAME="com.google.api.client.http.LowLevelHttpResponse.dmethod.getContentType()"></A><a href="com.google.api.client.http.LowLevelHttpResponse.html" class="hiddenlink">Class <b>LowLevelHttpResponse</b></a>, <a href="com.google.api.client.http.LowLevelHttpResponse.html#com.google.api.client.http.LowLevelHttpResponse.getContentType_changed()" class="hiddenlink">String <b>getContentType()</b></a><br><br><blockquote>Returns the content type or {@code null} for none.<strike>
+
+ 
+ Upgrade warning: this method now throws an IOException. In prior version 1.11 it did
+ not throw an exception.
+ </strike></blockquote>
+<A NAME="com.google.api.client.http.LowLevelHttpResponse.dmethod.getHeaderCount()"></A><a href="com.google.api.client.http.LowLevelHttpResponse.html" class="hiddenlink">Class <b>LowLevelHttpResponse</b></a>, <a href="com.google.api.client.http.LowLevelHttpResponse.html#com.google.api.client.http.LowLevelHttpResponse.getHeaderCount_changed()" class="hiddenlink">int <b>getHeaderCount()</b></a><br><br><blockquote>Returns the number of HTTP response headers.
+
+ <p>
+ Note that multiple headers of the same name need to be supported, in which case each header
+ value is treated as a separate header.
+ </p><strike>
+
+ 
+ Upgrade warning: this method now throws an IOException. In prior version 1.11 it did
+ not throw an exception.
+ </strike></blockquote>
+<A NAME="com.google.api.client.http.LowLevelHttpResponse.dmethod.getHeaderName(int)"></A><a href="com.google.api.client.http.LowLevelHttpResponse.html" class="hiddenlink">Class <b>LowLevelHttpResponse</b></a>, <a href="com.google.api.client.http.LowLevelHttpResponse.html#com.google.api.client.http.LowLevelHttpResponse.getHeaderName_changed(int)" class="hiddenlink">String <b>getHeaderName(int)</b></a><br><br><blockquote>Returns the HTTP response header name at the given zero-based index.<strike>
+
+ 
+ Upgrade warning: this method now throws an IOException. In prior version 1.11 it did
+ not throw an exception.
+ </strike></blockquote>
+<A NAME="com.google.api.client.http.LowLevelHttpResponse.dmethod.getHeaderValue(int)"></A><a href="com.google.api.client.http.LowLevelHttpResponse.html" class="hiddenlink">Class <b>LowLevelHttpResponse</b></a>, <a href="com.google.api.client.http.LowLevelHttpResponse.html#com.google.api.client.http.LowLevelHttpResponse.getHeaderValue_changed(int)" class="hiddenlink">String <b>getHeaderValue(int)</b></a><br><br><blockquote>Returns the HTTP response header value at the given zero-based index.<strike>
+
+ 
+ Upgrade warning: this method now throws an IOException. In prior version 1.11 it did
+ not throw an exception.
+ </strike></blockquote>
+<A NAME="com.google.api.client.http.LowLevelHttpResponse.dmethod.getReasonPhrase()"></A><a href="com.google.api.client.http.LowLevelHttpResponse.html" class="hiddenlink">Class <b>LowLevelHttpResponse</b></a>, <a href="com.google.api.client.http.LowLevelHttpResponse.html#com.google.api.client.http.LowLevelHttpResponse.getReasonPhrase_changed()" class="hiddenlink">String <b>getReasonPhrase()</b></a><br><br><blockquote>Returns the HTTP reason phrase or {@code null} for none.<strike>
+
+ 
+ Upgrade warning: this method now throws an IOException. In prior version 1.11 it did
+ not throw an exception.
+ </strike></blockquote>
+<A NAME="com.google.api.client.http.LowLevelHttpResponse.dmethod.getStatusCode()"></A><a href="com.google.api.client.http.LowLevelHttpResponse.html" class="hiddenlink">Class <b>LowLevelHttpResponse</b></a>, <a href="com.google.api.client.http.LowLevelHttpResponse.html#com.google.api.client.http.LowLevelHttpResponse.getStatusCode_changed()" class="hiddenlink">int <b>getStatusCode()</b></a><br><br><blockquote>Returns the response status code or {@code 0} for none.<strike>
+
+ 
+ Upgrade warning: this method now throws an IOException. In prior version 1.11 it did
+ not throw an exception.
+ </strike></blockquote>
+<A NAME="com.google.api.client.http.LowLevelHttpResponse.dmethod.getStatusLine()"></A><a href="com.google.api.client.http.LowLevelHttpResponse.html" class="hiddenlink">Class <b>LowLevelHttpResponse</b></a>, <a href="com.google.api.client.http.LowLevelHttpResponse.html#com.google.api.client.http.LowLevelHttpResponse.getStatusLine_changed()" class="hiddenlink">String <b>getStatusLine()</b></a><br><br><blockquote>Returns the response status line or {@code null} for none.<strike>
+
+ 
+ Upgrade warning: this method now throws an IOException. In prior version 1.11 it did
+ not throw an exception.
+ </strike></blockquote>
+<hr align="left" width="100%">
+<A NAME="com.google.api.client.http.MultipartRelatedContent!class"></A><a href="com.google.api.client.http.MultipartRelatedContent.html" class="hiddenlink">Class <b>MultipartRelatedContent</b></a><br><br><blockquote>Serializes MIME Multipart/Related content as specified by <a
+ href="http://tools.ietf.org/html/rfc2387">RFC 2387: The MIME Multipart/Related Content-type</a>.
+ <p>
+ Limitations:
+ <ul>
+ <li>No support of parameters other than {@code "boundary"}</li>
+ <li>No support for specifying headers for each content part</li>
+ <li>The content type of each part is required, so <A HREF="../Google HTTP Client Library for Java 1.14.1-beta/com/google/api/client/http/MultipartRelatedContent/HttpContent.html#getType()"><TT>HttpContent.getType()</TT></A> must not be
+ {@code null}</li>
+ </ul>
+ </p>
+ <p>
+ Use <A HREF="../Google HTTP Client Library for Java 1.14.1-beta/com/google/api/client/http/MultipartRelatedContent/.html#forRequest(HttpRequest)"><TT>.forRequest(HttpRequest)</TT></A> to construct. For example:
+
+ <pre><code>
+  static void setMediaWithMetadataContent(
+      HttpRequest request, AtomContent atomContent, InputStreamContent imageContent) {
+    MultipartRelatedContent.forRequest(request, atomContent, imageContent);
+  }
+ </code></pre>
+ </p>
+
+ <p>
+ <A HREF="../Google HTTP Client Library for Java 1.14.1-beta/com/google/api/client/http/MultipartRelatedContent/.html#writeTo"><TT>.writeTo</TT></A> can be called multiple times for Multipart/Related content. Parts must not
+ close the output stream in <A HREF="../Google HTTP Client Library for Java 1.14.1-beta/com/google/api/client/http/MultipartRelatedContent/.html#writeTo"><TT>.writeTo</TT></A>.
+ </p>
+
+ <p>
+ Implementation is not thread-safe.
+ </p>
+
+ @since 1.1
+ @author Yaniv <strike>Inbar</strike><span style="background: #FFFF00">Inbar
+ @deprecated (scheduled to be removed in 1.15) Use <A HREF="../Google HTTP Client Library for Java 1.14.1-beta/com/google/api/client/http/MultipartRelatedContent/MultipartContent.html"><TT>MultipartContent</TT></A> instead.</span></blockquote>
+<hr align="left" width="100%">
+<A NAME="com.google.api.client.http.UrlEncodedParser!class"></A><a href="com.google.api.client.http.UrlEncodedParser.html" class="hiddenlink">Class <b>UrlEncodedParser</b></a><br><br><blockquote>Implements support for HTTP form content encoding parsing of type
+ {@code application/x-www-form-urlencoded} as specified in the <a href=
+ "http://www.w3.org/TR/1998/REC-html40-19980424/interact/forms.html#h-17.13.4.1" >HTML 4.0
+ Specification</a>.
+
+ <p>
+ Implementation is thread-safe.
+ </p>
+
+ <p>
+ The data is parsed using <A HREF="../Google HTTP Client Library for Java 1.14.1-beta/com/google/api/client/http/UrlEncodedParser/.html#parse(String, Object)"><TT>.parse(String, Object)</TT></A>.
+ </p>
+
+ <p>
+ Sample usage:<span style="background: #FFFF00">
+ </p></span>
+
+ <pre>
+   static void setParser(HttpTransport transport) {
+     transport.addParser(new UrlEncodedParser());
+   }
+ </pre>
+
+ @since 1.0
+ @author Yaniv Inbar</blockquote>
 <hr align="left" width="100%">
 
 </BODY>

@@ -32,14 +32,14 @@ com.google.api.client.util
 </TR>
 <TR>
   <TD BGCOLOR="#FFFFFF" CLASS="NavBarCell2"><FONT SIZE="-2">
-&nbsp;<A HREF="pkg_com.google.api.client.testing.util.html"><B>PREV PACKAGE</B></A>
+&nbsp;<A HREF="pkg_com.google.api.client.testing.http.json.html"><B>PREV PACKAGE</B></A>
 &nbsp;<A HREF="pkg_com.google.api.client.xml.html"><B>NEXT PACKAGE</B></A>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
   <A HREF="../changes.html" TARGET="_top"><B>FRAMES</B></A>  &nbsp;
   &nbsp;<A HREF="pkg_com.google.api.client.util.html" TARGET="_top"><B>NO FRAMES</B></A></FONT></TD>
   <TD BGCOLOR="#FFFFFF" CLASS="NavBarCell3"><FONT SIZE="-2"> DETAIL: &nbsp;
-<a href="#Removed">REMOVED</a>&nbsp;|&nbsp;
-ADDED&nbsp;|&nbsp;
+REMOVED&nbsp;|&nbsp;
+<a href="#Added">ADDED</a>&nbsp;|&nbsp;
 <a href="#Changed">CHANGED</a>
   </FONT></TD>
 </TR>
@@ -50,120 +50,192 @@ ADDED&nbsp;|&nbsp;
 Package <A HREF="../Google HTTP Client Library for Java 1.14.1-beta/com/google/api/client/util/package-summary.html" target="_top"><tt>com.google.api.client.util</tt></A>
 </H2>
 <p>
-<a NAME="Removed"></a>
-<TABLE summary="Removed Classes and Interfaces" BORDER="1" CELLPADDING="3" CELLSPACING="0" WIDTH="100%">
+<a NAME="Added"></a>
+<TABLE summary="Added Classes and Interfaces" BORDER="1" CELLPADDING="3" CELLSPACING="0" WIDTH="100%">
 <TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
-  <TD VALIGN="TOP" COLSPAN=2><FONT SIZE="+1"><B>Removed Classes and Interfaces</B></FONT></TD>
+  <TD VALIGN="TOP" COLSPAN=2><FONT SIZE="+1"><B>Added Classes and Interfaces</B></FONT></TD>
 </TR>
 <TR BGCOLOR="#FFFFFF" CLASS="TableRowColor">
   <TD VALIGN="TOP" WIDTH="25%">
-  <A NAME="BackOff"></A>
-  <nobr><A HREF="../Google HTTP Client Library for Java 1.13.0-beta/com/google/api/client/util/BackOff.html" target="_top"><tt><I>BackOff</I></tt></A></nobr>
+  <A NAME="ByteArrayStreamingContent"></A>
+  <nobr><A HREF="../Google HTTP Client Library for Java 1.14.1-beta/com/google/api/client/util/ByteArrayStreamingContent.html" target="_top"><tt>ByteArrayStreamingContent</tt></A></nobr>
   </TD>
-  <TD VALIGN="TOP">Back-off policy when retrying an operation.</TD>
-</TR>
-<TR BGCOLOR="#FFFFFF" CLASS="TableRowColor">
-  <TD VALIGN="TOP" WIDTH="25%">
-  <A NAME="BackOffUtils"></A>
-  <nobr><A HREF="../Google HTTP Client Library for Java 1.13.0-beta/com/google/api/client/util/BackOffUtils.html" target="_top"><tt>BackOffUtils</tt></A></nobr>
-  </TD>
-  <TD VALIGN="TOP"><A HREF="../Google HTTP Client Library for Java 1.14.1-beta/com/google/api/client/util/BackOffUtils/Experimental.html"><TT>Experimental</TT></A> <br/>
- Utilities for <A HREF="../Google HTTP Client Library for Java 1.14.1-beta/com/google/api/client/util/BackOffUtils/BackOff.html"><TT>BackOff</TT></A>.</TD>
-</TR>
-<TR BGCOLOR="#FFFFFF" CLASS="TableRowColor">
-  <TD VALIGN="TOP" WIDTH="25%">
-  <A NAME="Experimental"></A>
-  <nobr><A HREF="../Google HTTP Client Library for Java 1.13.0-beta/com/google/api/client/util/Experimental.html" target="_top"><tt>Experimental</tt></A></nobr>
-  </TD>
-  <TD VALIGN="TOP">Use this annotation to indicate that a public API (class, method or field) is experimental.</TD>
-</TR>
-<TR BGCOLOR="#FFFFFF" CLASS="TableRowColor">
-  <TD VALIGN="TOP" WIDTH="25%">
-  <A NAME="ExponentialBackOff"></A>
-  <nobr><A HREF="../Google HTTP Client Library for Java 1.13.0-beta/com/google/api/client/util/ExponentialBackOff.html" target="_top"><tt>ExponentialBackOff</tt></A></nobr>
-  </TD>
-  <TD VALIGN="TOP">Implementation of <A HREF="../Google HTTP Client Library for Java 1.14.1-beta/com/google/api/client/util/ExponentialBackOff/BackOff.html"><TT>BackOff</TT></A> that increases the back off period for each retry attempt using
- a randomization function that grows exponentially.</TD>
-</TR>
-<TR BGCOLOR="#FFFFFF" CLASS="TableRowColor">
-  <TD VALIGN="TOP" WIDTH="25%">
-  <A NAME="ExponentialBackOff.Builder"></A>
-  <nobr><A HREF="../Google HTTP Client Library for Java 1.13.0-beta/com/google/api/client/util/ExponentialBackOff.Builder.html" target="_top"><tt>ExponentialBackOff.Builder</tt></A></nobr>
-  </TD>
-  <TD VALIGN="TOP">Builder for <A HREF="../Google HTTP Client Library for Java 1.14.1-beta/com/google/api/client/util/ExponentialBackOff/Builder/ExponentialBackOff.html"><TT>ExponentialBackOff</TT></A>.</TD>
-</TR>
-<TR BGCOLOR="#FFFFFF" CLASS="TableRowColor">
-  <TD VALIGN="TOP" WIDTH="25%">
-  <A NAME="Sleeper"></A>
-  <nobr><A HREF="../Google HTTP Client Library for Java 1.13.0-beta/com/google/api/client/util/Sleeper.html" target="_top"><tt><I>Sleeper</I></tt></A></nobr>
-  </TD>
-  <TD VALIGN="TOP">Sleeper interface to use for requesting the current thread to sleep as specified in
- <A HREF="../Google HTTP Client Library for Java 1.14.1-beta/com/google/api/client/util/Sleeper/Thread.html#sleep(long)"><TT>Thread.sleep(long)</TT></A>.</TD>
-</TR>
-</TABLE>
-&nbsp;
-<p>
-<a NAME="Changed"></a>
-<TABLE summary="Changed Classes and Interfaces" BORDER="1" CELLPADDING="3" CELLSPACING="0" WIDTH="100%">
-<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
-  <TD VALIGN="TOP" COLSPAN=2><FONT SIZE="+1"><B>Changed Classes and Interfaces</B></FONT></TD>
+  <TD VALIGN="TOP">Streaming content whose source is a byte array.</TD>
 </TR>
 <TR BGCOLOR="#FFFFFF" CLASS="TableRowColor">
   <TD VALIGN="TOP" WIDTH="25%">
   <A NAME="ByteStreams"></A>
-  <nobr><A HREF="com.google.api.client.util.ByteStreams.html">ByteStreams</A></nobr>
+  <nobr><A HREF="../Google HTTP Client Library for Java 1.14.1-beta/com/google/api/client/util/ByteStreams.html" target="_top"><tt>ByteStreams</tt></A></nobr>
   </TD>
   <TD VALIGN="TOP">Provides utility methods for working with byte arrays and I/O streams.</TD>
 </TR>
 <TR BGCOLOR="#FFFFFF" CLASS="TableRowColor">
   <TD VALIGN="TOP" WIDTH="25%">
   <A NAME="Charsets"></A>
-  <nobr><A HREF="com.google.api.client.util.Charsets.html">Charsets</A></nobr>
+  <nobr><A HREF="../Google HTTP Client Library for Java 1.14.1-beta/com/google/api/client/util/Charsets.html" target="_top"><tt>Charsets</tt></A></nobr>
   </TD>
   <TD VALIGN="TOP">Contains constant definitions for some standard <A HREF="../Google HTTP Client Library for Java 1.14.1-beta/com/google/api/client/util/Charsets/Charset.html"><TT>Charset</TT></A> instances that are guaranteed to
  be supported by all Java platform implementations.</TD>
 </TR>
 <TR BGCOLOR="#FFFFFF" CLASS="TableRowColor">
   <TD VALIGN="TOP" WIDTH="25%">
-  <A NAME="Clock"></A>
-  <nobr><A HREF="com.google.api.client.util.Clock.html"><I>Clock</I></A></nobr>
-  </TD>
-  <TD VALIGN="TOP">Clock which can be used to get the amount of elapsed milliseconds in system time.</TD>
-</TR>
-<TR BGCOLOR="#FFFFFF" CLASS="TableRowColor">
-  <TD VALIGN="TOP" WIDTH="25%">
   <A NAME="Collections2"></A>
-  <nobr><A HREF="com.google.api.client.util.Collections2.html">Collections2</A></nobr>
+  <nobr><A HREF="../Google HTTP Client Library for Java 1.14.1-beta/com/google/api/client/util/Collections2.html" target="_top"><tt>Collections2</tt></A></nobr>
   </TD>
   <TD VALIGN="TOP">Static utility methods pertaining to <A HREF="../Google HTTP Client Library for Java 1.14.1-beta/com/google/api/client/util/Collections2/Collection.html"><TT>Collection</TT></A> instances.</TD>
 </TR>
 <TR BGCOLOR="#FFFFFF" CLASS="TableRowColor">
   <TD VALIGN="TOP" WIDTH="25%">
+  <A NAME="IOUtils"></A>
+  <nobr><A HREF="../Google HTTP Client Library for Java 1.14.1-beta/com/google/api/client/util/IOUtils.html" target="_top"><tt>IOUtils</tt></A></nobr>
+  </TD>
+  <TD VALIGN="TOP">Utilities for I/O streams.</TD>
+</TR>
+<TR BGCOLOR="#FFFFFF" CLASS="TableRowColor">
+  <TD VALIGN="TOP" WIDTH="25%">
+  <A NAME="Joiner"></A>
+  <nobr><A HREF="../Google HTTP Client Library for Java 1.14.1-beta/com/google/api/client/util/Joiner.html" target="_top"><tt>Joiner</tt></A></nobr>
+  </TD>
+  <TD VALIGN="TOP">An object which joins pieces of text (specified as an array, <A HREF="../Google HTTP Client Library for Java 1.14.1-beta/com/google/api/client/util/Joiner/Iterable.html"><TT>Iterable</TT></A>, varargs or even a
+ <A HREF="../Google HTTP Client Library for Java 1.14.1-beta/com/google/api/client/util/Joiner/Map.html"><TT>Map</TT></A>) with a separator.</TD>
+</TR>
+<TR BGCOLOR="#FFFFFF" CLASS="TableRowColor">
+  <TD VALIGN="TOP" WIDTH="25%">
   <A NAME="Lists"></A>
-  <nobr><A HREF="com.google.api.client.util.Lists.html">Lists</A></nobr>
+  <nobr><A HREF="../Google HTTP Client Library for Java 1.14.1-beta/com/google/api/client/util/Lists.html" target="_top"><tt>Lists</tt></A></nobr>
   </TD>
   <TD VALIGN="TOP">Static utility methods pertaining to <A HREF="../Google HTTP Client Library for Java 1.14.1-beta/com/google/api/client/util/Lists/List.html"><TT>List</TT></A> instances.</TD>
 </TR>
 <TR BGCOLOR="#FFFFFF" CLASS="TableRowColor">
   <TD VALIGN="TOP" WIDTH="25%">
+  <A NAME="LoggingStreamingContent"></A>
+  <nobr><A HREF="../Google HTTP Client Library for Java 1.14.1-beta/com/google/api/client/util/LoggingStreamingContent.html" target="_top"><tt>LoggingStreamingContent</tt></A></nobr>
+  </TD>
+  <TD VALIGN="TOP">Wraps another streaming content without modifying the content, but also logging content using
+ <A HREF="../Google HTTP Client Library for Java 1.14.1-beta/com/google/api/client/util/LoggingStreamingContent/LoggingOutputStream.html"><TT>LoggingOutputStream</TT></A>.</TD>
+</TR>
+<TR BGCOLOR="#FFFFFF" CLASS="TableRowColor">
+  <TD VALIGN="TOP" WIDTH="25%">
   <A NAME="Maps"></A>
-  <nobr><A HREF="com.google.api.client.util.Maps.html">Maps</A></nobr>
+  <nobr><A HREF="../Google HTTP Client Library for Java 1.14.1-beta/com/google/api/client/util/Maps.html" target="_top"><tt>Maps</tt></A></nobr>
   </TD>
   <TD VALIGN="TOP">Static utility methods pertaining to <A HREF="../Google HTTP Client Library for Java 1.14.1-beta/com/google/api/client/util/Maps/Map.html"><TT>Map</TT></A> instances.</TD>
 </TR>
 <TR BGCOLOR="#FFFFFF" CLASS="TableRowColor">
   <TD VALIGN="TOP" WIDTH="25%">
   <A NAME="NanoClock"></A>
-  <nobr><A HREF="com.google.api.client.util.NanoClock.html"><I>NanoClock</I></A></nobr>
+  <nobr><A HREF="../Google HTTP Client Library for Java 1.14.1-beta/com/google/api/client/util/NanoClock.html" target="_top"><tt><I>NanoClock</I></tt></A></nobr>
   </TD>
   <TD VALIGN="TOP">Nano clock which can be used to measure elapsed time in nanoseconds.</TD>
 </TR>
 <TR BGCOLOR="#FFFFFF" CLASS="TableRowColor">
   <TD VALIGN="TOP" WIDTH="25%">
+  <A NAME="Objects"></A>
+  <nobr><A HREF="../Google HTTP Client Library for Java 1.14.1-beta/com/google/api/client/util/Objects.html" target="_top"><tt>Objects</tt></A></nobr>
+  </TD>
+  <TD VALIGN="TOP">Helper functions that can operate on any {@code Object}.</TD>
+</TR>
+<TR BGCOLOR="#FFFFFF" CLASS="TableRowColor">
+  <TD VALIGN="TOP" WIDTH="25%">
+  <A NAME="Objects.ToStringHelper"></A>
+  <nobr><A HREF="../Google HTTP Client Library for Java 1.14.1-beta/com/google/api/client/util/Objects.ToStringHelper.html" target="_top"><tt>Objects.ToStringHelper</tt></A></nobr>
+  </TD>
+  <TD VALIGN="TOP">Support class for <A HREF="../Google HTTP Client Library for Java 1.14.1-beta/com/google/api/client/util/Objects/ToStringHelper/Objects.html#toStringHelper"><TT>Objects.toStringHelper</TT></A>.</TD>
+</TR>
+<TR BGCOLOR="#FFFFFF" CLASS="TableRowColor">
+  <TD VALIGN="TOP" WIDTH="25%">
+  <A NAME="PemReader"></A>
+  <nobr><A HREF="../Google HTTP Client Library for Java 1.14.1-beta/com/google/api/client/util/PemReader.html" target="_top"><tt>PemReader</tt></A></nobr>
+  </TD>
+  <TD VALIGN="TOP">PEM file reader.</TD>
+</TR>
+<TR BGCOLOR="#FFFFFF" CLASS="TableRowColor">
+  <TD VALIGN="TOP" WIDTH="25%">
+  <A NAME="PemReader.Section"></A>
+  <nobr><A HREF="../Google HTTP Client Library for Java 1.14.1-beta/com/google/api/client/util/PemReader.Section.html" target="_top"><tt>PemReader.Section</tt></A></nobr>
+  </TD>
+  <TD VALIGN="TOP">Section in the PEM file.</TD>
+</TR>
+<TR BGCOLOR="#FFFFFF" CLASS="TableRowColor">
+  <TD VALIGN="TOP" WIDTH="25%">
+  <A NAME="Preconditions"></A>
+  <nobr><A HREF="../Google HTTP Client Library for Java 1.14.1-beta/com/google/api/client/util/Preconditions.html" target="_top"><tt>Preconditions</tt></A></nobr>
+  </TD>
+  <TD VALIGN="TOP">Simple static methods to be called at the start of your own methods to verify correct arguments
+ and state.</TD>
+</TR>
+<TR BGCOLOR="#FFFFFF" CLASS="TableRowColor">
+  <TD VALIGN="TOP" WIDTH="25%">
+  <A NAME="SecurityUtils"></A>
+  <nobr><A HREF="../Google HTTP Client Library for Java 1.14.1-beta/com/google/api/client/util/SecurityUtils.html" target="_top"><tt>SecurityUtils</tt></A></nobr>
+  </TD>
+  <TD VALIGN="TOP">Utilities related to Java security.</TD>
+</TR>
+<TR BGCOLOR="#FFFFFF" CLASS="TableRowColor">
+  <TD VALIGN="TOP" WIDTH="25%">
   <A NAME="Sets"></A>
-  <nobr><A HREF="com.google.api.client.util.Sets.html">Sets</A></nobr>
+  <nobr><A HREF="../Google HTTP Client Library for Java 1.14.1-beta/com/google/api/client/util/Sets.html" target="_top"><tt>Sets</tt></A></nobr>
   </TD>
   <TD VALIGN="TOP">Static utility methods pertaining to <A HREF="../Google HTTP Client Library for Java 1.14.1-beta/com/google/api/client/util/Sets/Set.html"><TT>Set</TT></A> instances.</TD>
+</TR>
+<TR BGCOLOR="#FFFFFF" CLASS="TableRowColor">
+  <TD VALIGN="TOP" WIDTH="25%">
+  <A NAME="StreamingContent"></A>
+  <nobr><A HREF="../Google HTTP Client Library for Java 1.14.1-beta/com/google/api/client/util/StreamingContent.html" target="_top"><tt><I>StreamingContent</I></tt></A></nobr>
+  </TD>
+  <TD VALIGN="TOP">Streaming content interface to write bytes to an output stream.</TD>
+</TR>
+<TR BGCOLOR="#FFFFFF" CLASS="TableRowColor">
+  <TD VALIGN="TOP" WIDTH="25%">
+  <A NAME="Strings"></A>
+  <nobr><A HREF="../Google HTTP Client Library for Java 1.14.1-beta/com/google/api/client/util/Strings.html" target="_top"><tt>Strings</tt></A></nobr>
+  </TD>
+  <TD VALIGN="TOP">Static utility methods pertaining to {@code String} instances.</TD>
+</TR>
+<TR BGCOLOR="#FFFFFF" CLASS="TableRowColor">
+  <TD VALIGN="TOP" WIDTH="25%">
+  <A NAME="Throwables"></A>
+  <nobr><A HREF="../Google HTTP Client Library for Java 1.14.1-beta/com/google/api/client/util/Throwables.html" target="_top"><tt>Throwables</tt></A></nobr>
+  </TD>
+  <TD VALIGN="TOP">Static utility methods pertaining to instances of <A HREF="../Google HTTP Client Library for Java 1.14.1-beta/com/google/api/client/util/Throwables/Throwable.html"><TT>Throwable</TT></A>.</TD>
+</TR>
+</TABLE>
+&nbsp;
+<p>
+<a NAME="Changed"></a>
+<TABLE summary="Changed Classes" BORDER="1" CELLPADDING="3" CELLSPACING="0" WIDTH="100%">
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+  <TD VALIGN="TOP" COLSPAN=2><FONT SIZE="+1"><B>Changed Classes</B></FONT></TD>
+</TR>
+<TR BGCOLOR="#FFFFFF" CLASS="TableRowColor">
+  <TD VALIGN="TOP" WIDTH="25%">
+  <A NAME="Base64"></A>
+  <nobr><A HREF="com.google.api.client.util.Base64.html">Base64</A></nobr>
+  </TD>
+  <TD VALIGN="TOP">Proxy for version 1.6 (or newer) of the Apache Commons Codec
+ <A HREF="../Google HTTP Client Library for Java 1.14.1-beta/com/google/api/client/util/Base64/org/apache/commons/codec/binary/Base64.html"><TT>org.apache.commons.codec.binary.Base64</TT></A> implementation.</TD>
+</TR>
+<TR BGCOLOR="#FFFFFF" CLASS="TableRowColor">
+  <TD VALIGN="TOP" WIDTH="25%">
+  <A NAME="Data"></A>
+  <nobr><A HREF="com.google.api.client.util.Data.html">Data</A></nobr>
+  </TD>
+  <TD VALIGN="TOP">Utilities for working with key/value data based on the <A HREF="../Google HTTP Client Library for Java 1.14.1-beta/com/google/api/client/util/Data/Key.html"><TT>Key</TT></A> annotation.</TD>
+</TR>
+<TR BGCOLOR="#FFFFFF" CLASS="TableRowColor">
+  <TD VALIGN="TOP" WIDTH="25%">
+  <A NAME="DateTime"></A>
+  <nobr><A HREF="com.google.api.client.util.DateTime.html">DateTime</A></nobr>
+  </TD>
+  <TD VALIGN="TOP">Immutable representation of a date with an optional time and an optional time zone based on <a
+ href="http://tools.ietf.org/html/rfc3339">RFC 3339</a>.</TD>
+</TR>
+<TR BGCOLOR="#FFFFFF" CLASS="TableRowColor">
+  <TD VALIGN="TOP" WIDTH="25%">
+  <A NAME="SslUtils"></A>
+  <nobr><A HREF="com.google.api.client.util.SslUtils.html">SslUtils</A></nobr>
+  </TD>
+  <TD VALIGN="TOP">SSL utilities.</TD>
 </TR>
 </TABLE>
 &nbsp;
@@ -188,7 +260,7 @@ Package <A HREF="../Google HTTP Client Library for Java 1.14.1-beta/com/google/a
 </TR>
 <TR>
   <TD BGCOLOR="#FFFFFF" CLASS="NavBarCell2"><FONT SIZE="-2">
-&nbsp;<A HREF="pkg_com.google.api.client.testing.util.html"><B>PREV PACKAGE</B></A>
+&nbsp;<A HREF="pkg_com.google.api.client.testing.http.json.html"><B>PREV PACKAGE</B></A>
 &nbsp;<A HREF="pkg_com.google.api.client.xml.html"><B>NEXT PACKAGE</B></A>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
   <A HREF="../changes.html" TARGET="_top"><B>FRAMES</B></A>  &nbsp;
