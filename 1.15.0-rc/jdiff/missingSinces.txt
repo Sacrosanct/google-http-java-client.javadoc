@@ -1,0 +1,38 @@
+OK: com.google.api.client.util.BackOff Interface
+OK: com.google.api.client.util.BackOffUtils Class
+OK: com.google.api.client.util.Beta Class
+OK: com.google.api.client.util.ExponentialBackOff Class
+MISSING @SINCE TAG: com.google.api.client.util.ExponentialBackOff.Builder Class
+OK: com.google.api.client.http.HttpBackOffIOExceptionHandler Class
+OK: com.google.api.client.http.HttpBackOffUnsuccessfulResponseHandler Class
+MISSING @SINCE TAG: com.google.api.client.http.HttpBackOffUnsuccessfulResponseHandler.BackOffRequired Interface
+OK: com.google.api.client.http.HttpIOExceptionHandler Interface
+OK: com.google.api.client.testing.util.MockBackOff Class
+OK: com.google.api.client.testing.util.MockSleeper Class
+OK: com.google.api.client.util.Sleeper Interface
+OK: com.google.api.client.util.escape.CharEscapers Method escapeUriUserInfo(java.lang.String)
+OK: com.google.api.client.http.HttpRequest Method getIOExceptionHandler()
+OK: com.google.api.client.http.HttpRequest Method getSleeper()
+OK: com.google.api.client.http.GenericUrl Method getUserInfo()
+OK: com.google.api.client.json.JsonParser Method parse(java.lang.Class<T>)
+MISSING @SINCE TAG: com.google.api.client.json.JsonParser Method parse(java.lang.Class<T>, com.google.api.client.json.CustomizeJsonParser)
+OK: com.google.api.client.json.JsonParser Method parse(java.lang.reflect.Type, boolean)
+OK: com.google.api.client.json.JsonParser Method parse(java.lang.reflect.Type, boolean, com.google.api.client.json.CustomizeJsonParser)
+OK: com.google.api.client.json.JsonParser Method parse(java.lang.Object)
+MISSING @SINCE TAG: com.google.api.client.json.JsonParser Method parse(java.lang.Object, com.google.api.client.json.CustomizeJsonParser)
+OK: com.google.api.client.json.JsonParser Method parseAndClose(java.lang.Class<T>)
+MISSING @SINCE TAG: com.google.api.client.json.JsonParser Method parseAndClose(java.lang.Class<T>, com.google.api.client.json.CustomizeJsonParser)
+OK: com.google.api.client.json.JsonParser Method parseAndClose(java.lang.Object)
+MISSING @SINCE TAG: com.google.api.client.json.JsonParser Method parseAndClose(java.lang.Object, com.google.api.client.json.CustomizeJsonParser)
+OK: com.google.api.client.json.JsonParser Method parseArray(java.lang.Class<?>, java.lang.Class<T>)
+MISSING @SINCE TAG: com.google.api.client.json.JsonParser Method parseArray(java.lang.Class<?>, java.lang.Class<T>, com.google.api.client.json.CustomizeJsonParser)
+OK: com.google.api.client.json.JsonParser Method parseArray(java.util.Collection<? super T>, java.lang.Class<T>)
+MISSING @SINCE TAG: com.google.api.client.json.JsonParser Method parseArray(java.util.Collection<? super T>, java.lang.Class<T>, com.google.api.client.json.CustomizeJsonParser)
+OK: com.google.api.client.json.JsonParser Method parseArrayAndClose(java.lang.Class<?>, java.lang.Class<T>)
+MISSING @SINCE TAG: com.google.api.client.json.JsonParser Method parseArrayAndClose(java.lang.Class<?>, java.lang.Class<T>, com.google.api.client.json.CustomizeJsonParser)
+OK: com.google.api.client.json.JsonParser Method parseArrayAndClose(java.util.Collection<? super T>, java.lang.Class<T>)
+MISSING @SINCE TAG: com.google.api.client.json.JsonParser Method parseArrayAndClose(java.util.Collection<? super T>, java.lang.Class<T>, com.google.api.client.json.CustomizeJsonParser)
+OK: com.google.api.client.http.HttpRequest Method setIOExceptionHandler(com.google.api.client.http.HttpIOExceptionHandler)
+OK: com.google.api.client.http.HttpRequest Method setSleeper(com.google.api.client.util.Sleeper)
+OK: com.google.api.client.http.GenericUrl Method setUserInfo(java.lang.String)
+OK: com.google.api.client.util.escape.PercentEscaper Field SAFEUSERINFOCHARS_URLENCODER
