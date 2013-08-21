@@ -1,0 +1,15 @@
+OK: com.google.api.client.json.JsonPolymorphicTypeMap Class
+MISSING @SINCE TAG: com.google.api.client.json.JsonPolymorphicTypeMap.TypeDef Class
+OK: com.google.api.client.util.IOUtils Method deserialize(byte[])
+OK: com.google.api.client.util.IOUtils Method deserialize(java.io.InputStream)
+OK: com.google.api.client.http.HttpHeaders Method getAuthenticateAsList()
+OK: com.google.api.client.json.webtoken.JsonWebSignature.Header Method getCritical()
+OK: com.google.api.client.json.gson.GsonFactory Method getDefaultInstance()
+OK: com.google.api.client.json.jackson2.JacksonFactory Method getDefaultInstance()
+OK: com.google.api.client.util.ClassInfo Method getFieldInfos()
+OK: com.google.api.client.util.IOUtils Method isSymbolicLink(java.io.File)
+OK: com.google.api.client.util.IOUtils Method serialize(java.lang.Object)
+OK: com.google.api.client.util.IOUtils Method serialize(java.lang.Object, java.io.OutputStream)
+OK: com.google.api.client.json.webtoken.JsonWebSignature.Header Method setCritical(java.util.List<java.lang.String>)
+NO DOC BLOCK: com.google.api.client.util.Objects.ToStringHelper Method toString()
+OK: com.google.api.client.http.HttpStatusCodes Field STATUS_CODE_BAD_GATEWAY
