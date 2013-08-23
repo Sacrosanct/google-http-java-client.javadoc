@@ -18,7 +18,7 @@ com.google.api.client.http Documentation Differences
 <TD COLSPAN=2 BGCOLOR="#EEEEFF" CLASS="NavBarCell1">
   <TABLE summary="Navigation bar" BORDER="0" CELLPADDING="0" CELLSPACING="3">
     <TR ALIGN="center" VALIGN="top">
-      <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1"> <A HREF="../Google API Client Library for Java 1.16.0-rc/com/google/api/client/http/package-summary.html" target="_top"><FONT CLASS="NavBarFont1"><B><tt>Google API Client Library for Java 1.16.0-rc</tt></B></FONT></A>&nbsp;</TD>
+      <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1"> <A HREF="../Google HTTP Client Library for Java 1.16.0-rc/com/google/api/client/http/package-summary.html" target="_top"><FONT CLASS="NavBarFont1"><B><tt>Google HTTP Client Library for Java 1.16.0-rc</tt></B></FONT></A>&nbsp;</TD>
       <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1"> <A HREF="changes-summary.html"><FONT CLASS="NavBarFont1"><B>Overview</B></FONT></A>&nbsp;</TD>
       <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1"> &nbsp;<FONT CLASS="NavBarFont1">Package</FONT>&nbsp;</TD>
       <TD BGCOLOR="#FFFFFF" CLASS="NavBarCell1"> &nbsp;<FONT CLASS="NavBarFont1">Class</FONT>&nbsp;</TD>
@@ -61,27 +61,27 @@ Similarly, documentation which was inherited from another class or interface is 
 </blockquote>
 <hr>
 
-<A NAME="com.google.api.client.http.BackOffPolicy!class"></A><a href="com.google.api.client.http.BackOffPolicy.html" class="hiddenlink">Class <b>BackOffPolicy</b></a><br><br><blockquote><A HREF="../Google API Client Library for Java 1.16.0-rc/com/google/api/client/http/BackOffPolicy/Beta.html"><TT>Beta</TT></A> <br/>
+<A NAME="com.google.api.client.http.BackOffPolicy!class"></A><a href="com.google.api.client.http.BackOffPolicy.html" class="hiddenlink">Class <b>BackOffPolicy</b></a><br><br><blockquote><A HREF="../Google HTTP Client Library for Java 1.16.0-rc/com/google/api/client/http/BackOffPolicy/Beta.html"><TT>Beta</TT></A> <br/>
  Strategy interface to control back off between retry attempts.
 
  @since 1.7
  @author Ravi Mistry
  @deprecated (scheduled to be removed in <strike>the </strike>1.<strike>16</strike><span style="background: #FFFF00">17</span>)<strike>.</strike> <strike>Use
-</strike><span style="background: #FFFF00">Use</span> <A HREF="../Google API Client Library for Java 1.16.0-rc/com/google/api/client/http/BackOffPolicy/HttpBackOffUnsuccessfulResponseHandler.html"><TT><span style="background: #FFFF00">HttpBackOffUnsuccessfulResponseHandler</TT></A>
+</strike><span style="background: #FFFF00">Use</span> <A HREF="../Google HTTP Client Library for Java 1.16.0-rc/com/google/api/client/http/BackOffPolicy/HttpBackOffUnsuccessfulResponseHandler.html"><TT><span style="background: #FFFF00">HttpBackOffUnsuccessfulResponseHandler</TT></A>
 </span>            <strike>HttpBackOffUnsuccessfulResponseHandler</strike> instead.</blockquote>
 <hr align="left" width="100%">
-<A NAME="com.google.api.client.http.ExponentialBackOffPolicy!class"></A><a href="com.google.api.client.http.ExponentialBackOffPolicy.html" class="hiddenlink">Class <b>ExponentialBackOffPolicy</b></a><br><br><blockquote><A HREF="../Google API Client Library for Java 1.16.0-rc/com/google/api/client/http/ExponentialBackOffPolicy/Beta.html"><TT>Beta</TT></A> <br/>
- Implementation of <A HREF="../Google API Client Library for Java 1.16.0-rc/com/google/api/client/http/ExponentialBackOffPolicy/BackOffPolicy.html"><TT>BackOffPolicy</TT></A> that increases the back off period for each retry attempt
+<A NAME="com.google.api.client.http.ExponentialBackOffPolicy!class"></A><a href="com.google.api.client.http.ExponentialBackOffPolicy.html" class="hiddenlink">Class <b>ExponentialBackOffPolicy</b></a><br><br><blockquote><A HREF="../Google HTTP Client Library for Java 1.16.0-rc/com/google/api/client/http/ExponentialBackOffPolicy/Beta.html"><TT>Beta</TT></A> <br/>
+ Implementation of <A HREF="../Google HTTP Client Library for Java 1.16.0-rc/com/google/api/client/http/ExponentialBackOffPolicy/BackOffPolicy.html"><TT>BackOffPolicy</TT></A> that increases the back off period for each retry attempt
  using a randomization function that grows exponentially.
 
  <p>
- <A HREF="../Google API Client Library for Java 1.16.0-rc/com/google/api/client/http/ExponentialBackOffPolicy/.html#getNextBackOffMillis()"><TT>.getNextBackOffMillis()</TT></A> is calculated using the following formula:
+ <A HREF="../Google HTTP Client Library for Java 1.16.0-rc/com/google/api/client/http/ExponentialBackOffPolicy/.html#getNextBackOffMillis()"><TT>.getNextBackOffMillis()</TT></A> is calculated using the following formula:
 
  <pre>
  randomized_interval =
      retry_interval * (random value in range [1 - randomization_factor, 1 + randomization_factor])
  </pre>
- In other words <A HREF="../Google API Client Library for Java 1.16.0-rc/com/google/api/client/http/ExponentialBackOffPolicy/.html#getNextBackOffMillis()"><TT>.getNextBackOffMillis()</TT></A> will range between the randomization factor
+ In other words <A HREF="../Google HTTP Client Library for Java 1.16.0-rc/com/google/api/client/http/ExponentialBackOffPolicy/.html#getNextBackOffMillis()"><TT>.getNextBackOffMillis()</TT></A> will range between the randomization factor
  percentage below and above the retry interval. For example, using 2 seconds as the base retry
  interval and 0.5 as the randomization factor, the actual back off period used in the next retry
  attempt will be between 1 and 3 seconds.
@@ -92,9 +92,9 @@ Similarly, documentation which was inherited from another class or interface is 
  </p>
 
  <p>
- If the time elapsed since an <A HREF="../Google API Client Library for Java 1.16.0-rc/com/google/api/client/http/ExponentialBackOffPolicy/ExponentialBackOffPolicy.html"><TT>ExponentialBackOffPolicy</TT></A> instance is created goes past the
- max_elapsed_time then the method <A HREF="../Google API Client Library for Java 1.16.0-rc/com/google/api/client/http/ExponentialBackOffPolicy/.html#getNextBackOffMillis()"><TT>.getNextBackOffMillis()</TT></A> starts returning
- <A HREF="../Google API Client Library for Java 1.16.0-rc/com/google/api/client/http/ExponentialBackOffPolicy/BackOffPolicy.html#STOP"><TT>BackOffPolicy.STOP</TT></A>. The elapsed time can be reset by calling <A HREF="../Google API Client Library for Java 1.16.0-rc/com/google/api/client/http/ExponentialBackOffPolicy/.html#reset()"><TT>.reset()</TT></A>.
+ If the time elapsed since an <A HREF="../Google HTTP Client Library for Java 1.16.0-rc/com/google/api/client/http/ExponentialBackOffPolicy/ExponentialBackOffPolicy.html"><TT>ExponentialBackOffPolicy</TT></A> instance is created goes past the
+ max_elapsed_time then the method <A HREF="../Google HTTP Client Library for Java 1.16.0-rc/com/google/api/client/http/ExponentialBackOffPolicy/.html#getNextBackOffMillis()"><TT>.getNextBackOffMillis()</TT></A> starts returning
+ <A HREF="../Google HTTP Client Library for Java 1.16.0-rc/com/google/api/client/http/ExponentialBackOffPolicy/BackOffPolicy.html#STOP"><TT>BackOffPolicy.STOP</TT></A>. The elapsed time can be reset by calling <A HREF="../Google HTTP Client Library for Java 1.16.0-rc/com/google/api/client/http/ExponentialBackOffPolicy/.html#reset()"><TT>.reset()</TT></A>.
  </p>
 
  <p>
@@ -114,7 +114,7 @@ Similarly, documentation which was inherited from another class or interface is 
  7             5.692              [2.846,  8.538]
  8             8.538              [4.269, 12.807]
  9            12.807              [6.403, 19.210]
- 10           19.210              <A HREF="../Google API Client Library for Java 1.16.0-rc/com/google/api/client/http/ExponentialBackOffPolicy/BackOffPolicy.html#STOP"><TT>BackOffPolicy.STOP</TT></A>
+ 10           19.210              <A HREF="../Google HTTP Client Library for Java 1.16.0-rc/com/google/api/client/http/ExponentialBackOffPolicy/BackOffPolicy.html#STOP"><TT>BackOffPolicy.STOP</TT></A>
  </pre>
  </p>
 
@@ -125,8 +125,8 @@ Similarly, documentation which was inherited from another class or interface is 
  @since 1.7
  @author Ravi Mistry
  @deprecated (scheduled to be removed in <strike>the </strike>1.<strike>16</strike><span style="background: #FFFF00">17</span>). <strike>Use
-</strike><span style="background: #FFFF00">Use</span> <A HREF="../Google API Client Library for Java 1.16.0-rc/com/google/api/client/http/ExponentialBackOffPolicy/HttpBackOffUnsuccessfulResponseHandler.html"><TT><span style="background: #FFFF00">HttpBackOffUnsuccessfulResponseHandler</TT></A>
-</span>            <strike>HttpBackOffUnsuccessfulResponseHandler</strike> with <A HREF="../Google API Client Library for Java 1.16.0-rc/com/google/api/client/http/ExponentialBackOffPolicy/ExponentialBackOff.html"><TT>ExponentialBackOff</TT></A><strike>
+</strike><span style="background: #FFFF00">Use</span> <A HREF="../Google HTTP Client Library for Java 1.16.0-rc/com/google/api/client/http/ExponentialBackOffPolicy/HttpBackOffUnsuccessfulResponseHandler.html"><TT><span style="background: #FFFF00">HttpBackOffUnsuccessfulResponseHandler</TT></A>
+</span>            <strike>HttpBackOffUnsuccessfulResponseHandler</strike> with <A HREF="../Google HTTP Client Library for Java 1.16.0-rc/com/google/api/client/http/ExponentialBackOffPolicy/ExponentialBackOff.html"><TT>ExponentialBackOff</TT></A><strike>
             </strike> instead.</blockquote>
 <hr align="left" width="100%">
 <A NAME="com.google.api.client.http.GenericUrl!class"></A><a href="com.google.api.client.http.GenericUrl.html" class="hiddenlink">Class <b>GenericUrl</b></a><br><br><blockquote>URL builder in which the query parameters are specified as generic data key/value pairs, based on
@@ -136,12 +136,12 @@ Similarly, documentation which was inherited from another class or interface is 
  <p>
  The query parameters are specified with the data key name as the parameter name, and the data
  value as the parameter value. Subclasses can declare fields for known query parameters using the
- <A HREF="../Google API Client Library for Java 1.16.0-rc/com/google/api/client/http/GenericUrl/Key.html"><TT>Key</TT></A> annotation. {@code null} parameter names are not allowed, but {@code null} query
+ <A HREF="../Google HTTP Client Library for Java 1.16.0-rc/com/google/api/client/http/GenericUrl/Key.html"><TT>Key</TT></A> annotation. {@code null} parameter names are not allowed, but {@code null} query
  values are allowed.
  </p>
 
  <p>
- Query parameter values are parsed using <A HREF="../Google API Client Library for Java 1.16.0-rc/com/google/api/client/http/GenericUrl/UrlEncodedParser.html#parse(String, Object)"><TT>UrlEncodedParser.parse(String, Object)</TT></A>.
+ Query parameter values are parsed using <A HREF="../Google HTTP Client Library for Java 1.16.0-rc/com/google/api/client/http/GenericUrl/UrlEncodedParser.html#parse(String, Object)"><TT>UrlEncodedParser.parse(String, Object)</TT></A>.
  </p>
 
  <p>
@@ -157,43 +157,43 @@ Similarly, documentation which was inherited from another class or interface is 
  @since 1.0
  @author Yaniv Inbar</blockquote>
 <hr align="left" width="100%">
-<A NAME="com.google.api.client.http.HttpRequest.dmethod.getBackOffPolicy()"></A><a href="com.google.api.client.http.HttpRequest.html" class="hiddenlink">Class <b>HttpRequest</b></a>, <a href="com.google.api.client.http.HttpRequest.html#com.google.api.client.http.HttpRequest.getBackOffPolicy_changed()" class="hiddenlink">BackOffPolicy <b>getBackOffPolicy()</b></a><br><br><blockquote><A HREF="../Google API Client Library for Java 1.16.0-rc/Beta.html"><TT>Beta</TT></A> <br/>
- Returns the <A HREF="../Google API Client Library for Java 1.16.0-rc/BackOffPolicy.html"><TT>BackOffPolicy</TT></A> to use between retry attempts or {@code null} for none.
+<A NAME="com.google.api.client.http.HttpRequest.dmethod.getBackOffPolicy()"></A><a href="com.google.api.client.http.HttpRequest.html" class="hiddenlink">Class <b>HttpRequest</b></a>, <a href="com.google.api.client.http.HttpRequest.html#com.google.api.client.http.HttpRequest.getBackOffPolicy_changed()" class="hiddenlink">BackOffPolicy <b>getBackOffPolicy()</b></a><br><br><blockquote><A HREF="../Google HTTP Client Library for Java 1.16.0-rc/Beta.html"><TT>Beta</TT></A> <br/>
+ Returns the <A HREF="../Google HTTP Client Library for Java 1.16.0-rc/BackOffPolicy.html"><TT>BackOffPolicy</TT></A> to use between retry attempts or {@code null} for none.
 
  @since 1.7
  @deprecated (scheduled to be removed in <strike>the </strike>1.<strike>16</strike><span style="background: #FFFF00">17</span>).
-             <A HREF="../Google API Client Library for Java 1.16.0-rc/.html#setUnsuccessfulResponseHandler(HttpUnsuccessfulResponseHandler)"><TT>.setUnsuccessfulResponseHandler(HttpUnsuccessfulResponseHandler)</TT></A> with a new
-             <A HREF="../Google API Client Library for Java 1.16.0-rc/HttpBackOffUnsuccessfulResponseHandler.html"><TT>HttpBackOffUnsuccessfulResponseHandler</TT></A> instead.</blockquote>
+             <A HREF="../Google HTTP Client Library for Java 1.16.0-rc/.html#setUnsuccessfulResponseHandler(HttpUnsuccessfulResponseHandler)"><TT>.setUnsuccessfulResponseHandler(HttpUnsuccessfulResponseHandler)</TT></A> with a new
+             <A HREF="../Google HTTP Client Library for Java 1.16.0-rc/HttpBackOffUnsuccessfulResponseHandler.html"><TT>HttpBackOffUnsuccessfulResponseHandler</TT></A> instead.</blockquote>
 <A NAME="com.google.api.client.http.HttpRequest.dmethod.getNumberOfRetries()"></A><a href="com.google.api.client.http.HttpRequest.html" class="hiddenlink">Class <b>HttpRequest</b></a>, <a href="com.google.api.client.http.HttpRequest.html#com.google.api.client.http.HttpRequest.getNumberOfRetries_changed()" class="hiddenlink">int <b>getNumberOfRetries()</b></a><br><br><blockquote>Returns the number of retries that will be allowed to execute <strike>as</strike><span style="background: #FFFF00">before</span> the <strike>result of an
  HttpUnsuccessfulResponseHandler</strike><span style="background: #FFFF00">request</span> <strike>before being</strike><span style="background: #FFFF00">will be
 </span> terminated or {@code 0} to not <strike>retry
 </strike><span style="background: #FFFF00">retry</span> requests.<strike>
 
 </strike><span style="background: #FFFF00"> Retries occur as a result of either
- <A HREF="../Google API Client Library for Java 1.16.0-rc/HttpUnsuccessfulResponseHandler.html"><TT>HttpUnsuccessfulResponseHandler</TT></A> or <A HREF="../Google API Client Library for Java 1.16.0-rc/HttpIOExceptionHandler.html"><TT>HttpIOExceptionHandler</TT></A> which handles
+ <A HREF="../Google HTTP Client Library for Java 1.16.0-rc/HttpUnsuccessfulResponseHandler.html"><TT>HttpUnsuccessfulResponseHandler</TT></A> or <A HREF="../Google HTTP Client Library for Java 1.16.0-rc/HttpIOExceptionHandler.html"><TT>HttpIOExceptionHandler</TT></A> which handles
  abnormal HTTP response or the I/O exception.
 
 
 </span> @since 1.5</blockquote>
-<A NAME="com.google.api.client.http.HttpRequest.dmethod.getRetryOnExecuteIOException()"></A><a href="com.google.api.client.http.HttpRequest.html" class="hiddenlink">Class <b>HttpRequest</b></a>, <a href="com.google.api.client.http.HttpRequest.html#com.google.api.client.http.HttpRequest.getRetryOnExecuteIOException_changed()" class="hiddenlink">boolean <b>getRetryOnExecuteIOException()</b></a><br><br><blockquote><A HREF="../Google API Client Library for Java 1.16.0-rc/Beta.html"><TT>Beta</TT></A> <br/>
- Returns whether to retry the request if an <A HREF="../Google API Client Library for Java 1.16.0-rc/IOException.html"><TT>IOException</TT></A> is encountered in
- <A HREF="../Google API Client Library for Java 1.16.0-rc/LowLevelHttpRequest.html#execute()"><TT>LowLevelHttpRequest.execute()</TT></A>.
+<A NAME="com.google.api.client.http.HttpRequest.dmethod.getRetryOnExecuteIOException()"></A><a href="com.google.api.client.http.HttpRequest.html" class="hiddenlink">Class <b>HttpRequest</b></a>, <a href="com.google.api.client.http.HttpRequest.html#com.google.api.client.http.HttpRequest.getRetryOnExecuteIOException_changed()" class="hiddenlink">boolean <b>getRetryOnExecuteIOException()</b></a><br><br><blockquote><A HREF="../Google HTTP Client Library for Java 1.16.0-rc/Beta.html"><TT>Beta</TT></A> <br/>
+ Returns whether to retry the request if an <A HREF="../Google HTTP Client Library for Java 1.16.0-rc/IOException.html"><TT>IOException</TT></A> is encountered in
+ <A HREF="../Google HTTP Client Library for Java 1.16.0-rc/LowLevelHttpRequest.html#execute()"><TT>LowLevelHttpRequest.execute()</TT></A>.
 
  @since 1.9
  @deprecated (scheduled to be removed in 1.<strike>16</strike><span style="background: #FFFF00">17</span>) Use
-             <A HREF="../Google API Client Library for Java 1.16.0-rc/.html#setIOExceptionHandler(HttpIOExceptionHandler)"><TT>.setIOExceptionHandler(HttpIOExceptionHandler)</TT></A> instead.</blockquote>
-<A NAME="com.google.api.client.http.HttpRequest.dmethod.setBackOffPolicy(BackOffPolicy)"></A><a href="com.google.api.client.http.HttpRequest.html" class="hiddenlink">Class <b>HttpRequest</b></a>, <a href="com.google.api.client.http.HttpRequest.html#com.google.api.client.http.HttpRequest.setBackOffPolicy_changed(com.google.api.client.http.BackOffPolicy)" class="hiddenlink">HttpRequest <b>setBackOffPolicy(BackOffPolicy)</b></a><br><br><blockquote><A HREF="../Google API Client Library for Java 1.16.0-rc/Beta.html"><TT>Beta</TT></A> <br/>
- Sets the <A HREF="../Google API Client Library for Java 1.16.0-rc/BackOffPolicy.html"><TT>BackOffPolicy</TT></A> to use between retry attempts or {@code null} for none.
+             <A HREF="../Google HTTP Client Library for Java 1.16.0-rc/.html#setIOExceptionHandler(HttpIOExceptionHandler)"><TT>.setIOExceptionHandler(HttpIOExceptionHandler)</TT></A> instead.</blockquote>
+<A NAME="com.google.api.client.http.HttpRequest.dmethod.setBackOffPolicy(BackOffPolicy)"></A><a href="com.google.api.client.http.HttpRequest.html" class="hiddenlink">Class <b>HttpRequest</b></a>, <a href="com.google.api.client.http.HttpRequest.html#com.google.api.client.http.HttpRequest.setBackOffPolicy_changed(com.google.api.client.http.BackOffPolicy)" class="hiddenlink">HttpRequest <b>setBackOffPolicy(BackOffPolicy)</b></a><br><br><blockquote><A HREF="../Google HTTP Client Library for Java 1.16.0-rc/Beta.html"><TT>Beta</TT></A> <br/>
+ Sets the <A HREF="../Google HTTP Client Library for Java 1.16.0-rc/BackOffPolicy.html"><TT>BackOffPolicy</TT></A> to use between retry attempts or {@code null} for none.
 
  @since 1.7
  @deprecated (scheduled to be removed in <strike>the </strike>1.<strike>16</strike><span style="background: #FFFF00">17</span>). Use
-             <A HREF="../Google API Client Library for Java 1.16.0-rc/.html#setUnsuccessfulResponseHandler(HttpUnsuccessfulResponseHandler)"><TT>.setUnsuccessfulResponseHandler(HttpUnsuccessfulResponseHandler)</TT></A> with a new
-             <A HREF="../Google API Client Library for Java 1.16.0-rc/HttpBackOffUnsuccessfulResponseHandler.html"><TT>HttpBackOffUnsuccessfulResponseHandler</TT></A> instead.</blockquote>
+             <A HREF="../Google HTTP Client Library for Java 1.16.0-rc/.html#setUnsuccessfulResponseHandler(HttpUnsuccessfulResponseHandler)"><TT>.setUnsuccessfulResponseHandler(HttpUnsuccessfulResponseHandler)</TT></A> with a new
+             <A HREF="../Google HTTP Client Library for Java 1.16.0-rc/HttpBackOffUnsuccessfulResponseHandler.html"><TT>HttpBackOffUnsuccessfulResponseHandler</TT></A> instead.</blockquote>
 <A NAME="com.google.api.client.http.HttpRequest.dmethod.setNumberOfRetries(int)"></A><a href="com.google.api.client.http.HttpRequest.html" class="hiddenlink">Class <b>HttpRequest</b></a>, <a href="com.google.api.client.http.HttpRequest.html#com.google.api.client.http.HttpRequest.setNumberOfRetries_changed(int)" class="hiddenlink">HttpRequest <b>setNumberOfRetries(int)</b></a><br><br><blockquote><strike>Returns</strike><span style="background: #FFFF00">Sets</span> the number of retries that will be allowed to execute <strike>as</strike><span style="background: #FFFF00">before</span> the <strike>result of an
  HttpUnsuccessfulResponseHandler</strike><span style="background: #FFFF00">request</span> <strike>before being</strike><span style="background: #FFFF00">will be
 </span> terminated or {@code 0} to not <strike>retry
 </strike><span style="background: #FFFF00">retry</span> requests.<span style="background: #FFFF00"> Retries occur as a result of either
- <A HREF="../Google API Client Library for Java 1.16.0-rc/HttpUnsuccessfulResponseHandler.html"><TT>HttpUnsuccessfulResponseHandler</TT></A> or <A HREF="../Google API Client Library for Java 1.16.0-rc/HttpIOExceptionHandler.html"><TT>HttpIOExceptionHandler</TT></A> which handles
+ <A HREF="../Google HTTP Client Library for Java 1.16.0-rc/HttpUnsuccessfulResponseHandler.html"><TT>HttpUnsuccessfulResponseHandler</TT></A> or <A HREF="../Google HTTP Client Library for Java 1.16.0-rc/HttpIOExceptionHandler.html"><TT>HttpIOExceptionHandler</TT></A> which handles
  abnormal HTTP response or the I/O exception.</span>
 
  <p>
@@ -201,9 +201,9 @@ Similarly, documentation which was inherited from another class or interface is 
  </p>
 
  @since 1.5</blockquote>
-<A NAME="com.google.api.client.http.HttpRequest.dmethod.setRetryOnExecuteIOException(boolean)"></A><a href="com.google.api.client.http.HttpRequest.html" class="hiddenlink">Class <b>HttpRequest</b></a>, <a href="com.google.api.client.http.HttpRequest.html#com.google.api.client.http.HttpRequest.setRetryOnExecuteIOException_changed(boolean)" class="hiddenlink">HttpRequest <b>setRetryOnExecuteIOException(boolean)</b></a><br><br><blockquote><A HREF="../Google API Client Library for Java 1.16.0-rc/Beta.html"><TT>Beta</TT></A> <br/>
- Sets whether to retry the request if an <A HREF="../Google API Client Library for Java 1.16.0-rc/IOException.html"><TT>IOException</TT></A> is encountered in
- <A HREF="../Google API Client Library for Java 1.16.0-rc/LowLevelHttpRequest.html#execute()"><TT>LowLevelHttpRequest.execute()</TT></A>.
+<A NAME="com.google.api.client.http.HttpRequest.dmethod.setRetryOnExecuteIOException(boolean)"></A><a href="com.google.api.client.http.HttpRequest.html" class="hiddenlink">Class <b>HttpRequest</b></a>, <a href="com.google.api.client.http.HttpRequest.html#com.google.api.client.http.HttpRequest.setRetryOnExecuteIOException_changed(boolean)" class="hiddenlink">HttpRequest <b>setRetryOnExecuteIOException(boolean)</b></a><br><br><blockquote><A HREF="../Google HTTP Client Library for Java 1.16.0-rc/Beta.html"><TT>Beta</TT></A> <br/>
+ Sets whether to retry the request if an <A HREF="../Google HTTP Client Library for Java 1.16.0-rc/IOException.html"><TT>IOException</TT></A> is encountered in
+ <A HREF="../Google HTTP Client Library for Java 1.16.0-rc/LowLevelHttpRequest.html#execute()"><TT>LowLevelHttpRequest.execute()</TT></A>.
 
  <p>
  The default value is {@code false}.
@@ -211,7 +211,7 @@ Similarly, documentation which was inherited from another class or interface is 
 
  @since 1.9
  @deprecated (scheduled to be removed in 1.<strike>16</strike><span style="background: #FFFF00">17</span>) Use
-             <A HREF="../Google API Client Library for Java 1.16.0-rc/.html#setIOExceptionHandler(HttpIOExceptionHandler)"><TT>.setIOExceptionHandler(HttpIOExceptionHandler)</TT></A> instead.</blockquote>
+             <A HREF="../Google HTTP Client Library for Java 1.16.0-rc/.html#setIOExceptionHandler(HttpIOExceptionHandler)"><TT>.setIOExceptionHandler(HttpIOExceptionHandler)</TT></A> instead.</blockquote>
 <hr align="left" width="100%">
 <A NAME="com.google.api.client.http.LowLevelHttpResponse.dmethod.getStatusCode()"></A><a href="com.google.api.client.http.LowLevelHttpResponse.html" class="hiddenlink">Class <b>LowLevelHttpResponse</b></a>, <a href="com.google.api.client.http.LowLevelHttpResponse.html#com.google.api.client.http.LowLevelHttpResponse.getStatusCode_changed()" class="hiddenlink">int <b>getStatusCode()</b></a><br><br><blockquote>Returns the response status code or {@code <0} for none.</blockquote>
 <hr align="left" width="100%">
