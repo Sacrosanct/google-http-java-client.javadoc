@@ -1,0 +1,6 @@
+OK: com.google.api.client.extensions.android.json.AndroidJsonFactory Method getDefaultInstance()
+OK: com.google.api.client.extensions.appengine.http.UrlFetchTransport Method getDefaultInstance()
+NO DOC BLOCK: com.google.api.client.testing.http.javanet.MockHttpURLConnection Method getErrorStream()
+NO DOC BLOCK: com.google.api.client.testing.http.javanet.MockHttpURLConnection Method getInputStream()
+MISSING @SINCE TAG: com.google.api.client.testing.http.javanet.MockHttpURLConnection Field ERROR_BUF
+MISSING @SINCE TAG: com.google.api.client.testing.http.javanet.MockHttpURLConnection Field INPUT_BUF
