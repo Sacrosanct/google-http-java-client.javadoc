@@ -1,0 +1,8 @@
+MISSING @SINCE TAG: com.google.api.client.util.escape.CharEscapers Method escapeUriPathWithoutReserved(java.lang.String)
+OK: com.google.api.client.testing.http.MockHttpTransport Method getLowLevelHttpRequest()
+OK: com.google.api.client.testing.http.MockHttpTransport.Builder Method getLowLevelHttpRequest()
+OK: com.google.api.client.testing.http.MockLowLevelHttpResponse Method setContent(byte[])
+OK: com.google.api.client.testing.http.MockHttpTransport.Builder Method setLowLevelHttpRequest(com.google.api.client.testing.http.MockLowLevelHttpRequest)
+OK: com.google.api.client.testing.http.MockHttpTransport.Builder Method setLowLevelHttpResponse(com.google.api.client.testing.http.MockLowLevelHttpResponse)
+OK: com.google.api.client.testing.http.MockLowLevelHttpResponse Method setZeroContent()
+MISSING @SINCE TAG: com.google.api.client.util.escape.PercentEscaper Field SAFE_PLUS_RESERVED_CHARS_URLENCODER
