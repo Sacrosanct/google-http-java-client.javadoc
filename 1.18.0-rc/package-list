@@ -18,6 +18,11 @@ com.google.api.client.json.jackson2
 com.google.api.client.json.rpc2
 com.google.api.client.json.webtoken
 com.google.api.client.protobuf
+com.google.api.client.testing.http
+com.google.api.client.testing.http.apache
+com.google.api.client.testing.http.javanet
+com.google.api.client.testing.json
+com.google.api.client.testing.util
 com.google.api.client.util
 com.google.api.client.util.escape
 com.google.api.client.util.store
